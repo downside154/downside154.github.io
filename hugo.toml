@@ -1,0 +1,4 @@
+baseURL = 'https://downside154.github.io/'
+languageCode = 'en-us'
+title = 'A Random Blog with Posts'
+theme = 'ananke'
