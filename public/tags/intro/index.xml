@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on A Random Blog with Posts</title>
-    <link>https://downside154.github.io/posts/</link>
-    <description>Recent content in Posts on A Random Blog with Posts</description>
+    <title>intro on A Random Blog with Posts</title>
+    <link>https://downside154.github.io/tags/intro/</link>
+    <description>Recent content in intro on A Random Blog with Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Feb 2023 16:18:35 +0900</lastBuildDate><atom:link href="https://downside154.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jun 2023 09:55:43 +0900</lastBuildDate><atom:link href="https://downside154.github.io/tags/intro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>a blog with stuff</title>
+      <link>https://downside154.github.io/</link>
+      <pubDate>Mon, 19 Jun 2023 09:55:43 +0900</pubDate>
+      
+      <guid>https://downside154.github.io/</guid>
+      <description>Welcome to my blog, where the scattered fragments of my thoughts have been meticulously woven together by the hand of a slightly tipsy genius. These are light and delightful concoctions of wit, wisdom, and vast amounts of “Why on earth would he do/think that?” moments.</description>
+    </item>
+    
     <item>
       <title>First Post</title>
       <link>https://downside154.github.io/posts/first-post/</link>

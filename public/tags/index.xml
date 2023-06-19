@@ -5,6 +5,34 @@
     <link>https://downside154.github.io/tags/</link>
     <description>Recent content in Tags on A Random Blog with Posts</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://downside154.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Jun 2023 09:55:43 +0900</lastBuildDate><atom:link href="https://downside154.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>intro</title>
+      <link>https://downside154.github.io/tags/intro/</link>
+      <pubDate>Mon, 19 Jun 2023 09:55:43 +0900</pubDate>
+      
+      <guid>https://downside154.github.io/tags/intro/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://downside154.github.io/tags/hugo/</link>
+      <pubDate>Fri, 17 Feb 2023 16:18:35 +0900</pubDate>
+      
+      <guid>https://downside154.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>markdown</title>
+      <link>https://downside154.github.io/tags/markdown/</link>
+      <pubDate>Fri, 17 Feb 2023 16:18:35 +0900</pubDate>
+      
+      <guid>https://downside154.github.io/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
