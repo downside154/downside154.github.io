@@ -3,6 +3,7 @@ title: "First Post"
 date: 2023-02-17T16:18:35+09:00
 tags: ["intro", "markdown", "hugo"]
 featured_image: "/images/spiderman1.jpg"
+omit_header_text: true
 ---
 
 

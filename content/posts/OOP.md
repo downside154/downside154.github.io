@@ -1,7 +1,7 @@
 ---
 title: "OOP"
 date: 2023-06-19T09:38:57+09:00
-draft: true
+draft: false
 ---
 
 Random fact of the Day: The acronym OOP can refer to a lot of things, even as a jargon for software developers. 

@@ -6,7 +6,17 @@
     <description>Recent content in Posts on A Random Blog with Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Feb 2023 16:18:35 +0900</lastBuildDate><atom:link href="https://downside154.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jun 2023 09:38:57 +0900</lastBuildDate><atom:link href="https://downside154.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OOP</title>
+      <link>https://downside154.github.io/posts/oop/</link>
+      <pubDate>Mon, 19 Jun 2023 09:38:57 +0900</pubDate>
+      
+      <guid>https://downside154.github.io/posts/oop/</guid>
+      <description>Random fact of the Day: The acronym OOP can refer to a lot of things, even as a jargon for software developers.
+Object Oriented Positioning Object Oriented Programming Out of Position Ordinary Object Pointer (JDK) </description>
+    </item>
+    
     <item>
       <title>First Post</title>
       <link>https://downside154.github.io/posts/first-post/</link>
