@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>A Random Blog with Posts</title>
+    <title>a blog with stuff on A Random Blog with Posts</title>
     <link>https://downside154.github.io/</link>
-    <description>Recent content on A Random Blog with Posts</description>
+    <description>Recent content in a blog with stuff on A Random Blog with Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Feb 2023 16:18:35 +0900</lastBuildDate><atom:link href="https://downside154.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jun 2023 09:55:43 +0900</lastBuildDate><atom:link href="https://downside154.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First Post</title>
       <link>https://downside154.github.io/posts/first-post/</link>
@@ -15,7 +15,8 @@
       <guid>https://downside154.github.io/posts/first-post/</guid>
       <description>Introduction : Test Post This is bold text, and this is emphasized text.
 [x] checking if markdown works.
-Visit the Hugo website!</description>
+Visit the Hugo website!
+testing image rendering: spiderman logo image render at 300px </description>
     </item>
     
   </channel>

@@ -15,7 +15,8 @@
       <guid>https://downside154.github.io/posts/first-post/</guid>
       <description>Introduction : Test Post This is bold text, and this is emphasized text.
 [x] checking if markdown works.
-Visit the Hugo website!</description>
+Visit the Hugo website!
+testing image rendering: spiderman logo image render at 300px </description>
     </item>
     
   </channel>
