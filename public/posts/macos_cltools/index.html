@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>MacOS Command Line Tools | A Random Blog with Posts</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="This post will have some command line tools used in macOS. Truth be told, I do not use ALL of these commands all of the time but I consider them useful nonetheless.
+caffeinate (sleep) caffeinate to prevent your mac from going to sleep as long as the command is running. caffeinate -u -t &lt;seconds&gt; to specify the time. Adding the -d flag prevents the display from going to sleep. caffeinate &lt;command&gt; will start the command in a new process and will prevent sleep until that process exits.">
+    <meta name="generator" content="Hugo 0.114.1">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="MacOS Command Line Tools" />
+<meta property="og:description" content="This post will have some command line tools used in macOS. Truth be told, I do not use ALL of these commands all of the time but I consider them useful nonetheless.
+caffeinate (sleep) caffeinate to prevent your mac from going to sleep as long as the command is running. caffeinate -u -t &lt;seconds&gt; to specify the time. Adding the -d flag prevents the display from going to sleep. caffeinate &lt;command&gt; will start the command in a new process and will prevent sleep until that process exits." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://downside154.github.io/posts/macos_cltools/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-06-28T00:15:38+09:00" />
+<meta property="article:modified_time" content="2023-06-28T00:15:38+09:00" />
+<meta itemprop="name" content="MacOS Command Line Tools">
+<meta itemprop="description" content="This post will have some command line tools used in macOS. Truth be told, I do not use ALL of these commands all of the time but I consider them useful nonetheless.
+caffeinate (sleep) caffeinate to prevent your mac from going to sleep as long as the command is running. caffeinate -u -t &lt;seconds&gt; to specify the time. Adding the -d flag prevents the display from going to sleep. caffeinate &lt;command&gt; will start the command in a new process and will prevent sleep until that process exits."><meta itemprop="datePublished" content="2023-06-28T00:15:38+09:00" />
+<meta itemprop="dateModified" content="2023-06-28T00:15:38+09:00" />
+<meta itemprop="wordCount" content="728">
+<meta itemprop="keywords" content="CLI,macOS,terminal," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MacOS Command Line Tools"/>
+<meta name="twitter:description" content="This post will have some command line tools used in macOS. Truth be told, I do not use ALL of these commands all of the time but I consider them useful nonetheless.
+caffeinate (sleep) caffeinate to prevent your mac from going to sleep as long as the command is running. caffeinate -u -t &lt;seconds&gt; to specify the time. Adding the -d flag prevents the display from going to sleep. caffeinate &lt;command&gt; will start the command in a new process and will prevent sleep until that process exits."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  <header class="cover bg-top" style="background-image: url('https://downside154.github.io/images/terminal.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        A Random Blog with Posts
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    
+    <a href="https://github.com/downside154" target="_blank" rel="noopener" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">MacOS Command Line Tools</div>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">MacOS Command Line Tools</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2023-06-28T00:15:38+09:00">June 28, 2023</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>This post will have some command line tools used in macOS. Truth be told, I do not use ALL of these commands all of the time but I consider them useful nonetheless.</p>
+<h3 id="caffeinate-sleep">caffeinate (sleep)</h3>
+<ul>
+<li><code>caffeinate</code> to prevent your mac from going to sleep as long as the command is running.</li>
+<li><code>caffeinate -u -t &lt;seconds&gt;</code> to specify the time.
+Adding the <code>-d</code> flag prevents the display from going to sleep.</li>
+<li><code>caffeinate &lt;command&gt;</code> will start the command in a new process and will prevent sleep until that process exits.</li>
+</ul>
+<h3 id="textutils-document-file-converter">textutils (document file converter)</h3>
+<ul>
+<li><code>textutil</code> converts files to and from MS Word, plain text, rich text, and HTML formats.</li>
+<li><code>textutil -convert html text.doc</code> converts <strong>text.doc</strong> into <strong>text.html</strong>.</li>
+<li>Possible values for <code>-convert</code> are : <strong>txt, html, rtf, rtfd, doc, docx</strong>.</li>
+</ul>
+<h3 id="mdfind-search-with-spotlight">mdfind (search with Spotlight)</h3>
+<ul>
+<li><code>mdfind &lt;query&gt;</code> performs a keyword-based Spotlight search with the query.</li>
+<li><code>mdfind kMDItemAppStoreHasReceipt=1</code> finds all apps installed from the App Store.</li>
+<li><code>mdfind name &lt;name&gt;</code> searches all files with the name <strong>name</strong>.</li>
+<li><code>-onlyin &lt;dir&gt;</code> flag restricts the search to a given directory.</li>
+</ul>
+<h3 id="networkquality-measure-internet-speed">networkQuality (measure Internet speed)</h3>
+<ul>
+<li><code>networkQuality</code> to run an Internet Speed test from your Mac.</li>
+<li><code>-v</code> flag for verbose.</li>
+<li><code>-i</code> flag to run a network test on a specific network interface.</li>
+</ul>
+<h3 id="screencapture-screenshots">screencapture (screenshots)</h3>
+<ul>
+<li><code>screencapture -c</code> to take a screenshot and copy to clipboard.</li>
+<li><code>screencapture &lt;file&gt;</code> to take screenshot and save to a file.</li>
+<li>Add the <code>-T &lt;seconds&gt;</code> to take the screenshot after a certain time.</li>
+</ul>
+<h3 id="pbcopy-and-pbpase">pbcopy and pbpase</h3>
+<ul>
+<li><code>&lt;command&gt; | pbcopy</code> copies the output of the command to the clipboard.</li>
+<li><code>pbpaste</code> outputs the contents of the clipboard to stdout.</li>
+</ul>
+<p>MacOS:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Copy the output of a command into your clipboard</span>
+</span></span><span style="display:flex;"><span>$ cat readme.txt | pbcopy
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Output the ocntents of your clipboard</span>
+</span></span><span style="display:flex;"><span>$ pbpaste
+</span></span></code></pre></div><p>Linux:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create aliases using xsel</span>
+</span></span><span style="display:flex;"><span>alias pbcopy<span style="color:#f92672">=</span>’xsel — clipboard — input’
+</span></span><span style="display:flex;"><span>alias pbpaste<span style="color:#f92672">=</span>’xsel — clipboard — output’
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create using xclip</span>
+</span></span><span style="display:flex;"><span>alias pbcopy<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;xclip -selection clipboard&#34;</span>
+</span></span><span style="display:flex;"><span>alias pbpaste<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;xclip -selection clipboard -o&#34;</span>
+</span></span></code></pre></div><h3 id="taskpolicy-control-scheduling-of-processes">taskpolicy (control scheduling of processes)</h3>
+<ul>
+<li><code>taskpolicy -b &lt;command&gt;</code> executes the command in the background. *On Apple silicon Macs, the process will only run on the efficiency cores.</li>
+<li><code>taskpolicy -b -p &lt;pid&gt;</code> downgrades an existing process to run in the background</li>
+<li><code>taskpolicy -B -p &lt;pid&gt;</code> removes the specified process from running in the background. <em>On Apple silicon, the process may now run on the efficiency or performance cores. This only works on processes that have been downgraded to the background, and not processes that started in the background</em></li>
+<li><code>taskpolicy -s &lt;command&gt;</code> starts the given command in suspended state; it is useful to allow a debugger to attach to the process right at the start of execution.</li>
+</ul>
+<h3 id="say-tts-engine">say (TTS engine)</h3>
+<ul>
+<li><code>say &lt;message&gt;</code> announces the given message.</li>
+<li><code>say -f input.txt -o output.aiff</code> to create an audiobook from the given text file.</li>
+</ul>
+<h3 id="sips-image-manipulation">sips (image manipulation)</h3>
+<ul>
+<li><code>sips -z &lt;height&gt; &lt;width&gt; &lt;image&gt;</code> resizes the specified image, ignoring the previous aspect ratio.</li>
+<li><code>sips -Z &lt;size&gt; &lt;image&gt;</code> resizes the largest side of the specified image, preserving aspect ratio.</li>
+<li><code>sips -r &lt;degrees&gt; &lt;image&gt;</code> rotates the image.</li>
+</ul>
+<h3 id="open-open-files">open (open files)</h3>
+<ul>
+<li><code>open .</code> opens the current directory in a new Folder window.</li>
+<li><code>open -a &lt;app&gt; &lt;file&gt;</code> opens the given file with a specific app.</li>
+</ul>
+<h3 id="pmset-power-management">pmset (power management)</h3>
+<ul>
+<li><code>pmset -g</code> prints all available power configuration information.</li>
+<li><code>pmset -g assertions</code> for information about power-related assertions made by other processes; <strong>useful for finding a process that is preventing your Mac from going to sleep</strong>.</li>
+<li><code>pmset -g thermlog</code> for information about any processes that have been throttled; <strong>useful for running benchmarks</strong>.</li>
+<li><code>pmset displaysleepnow</code> puts the display to sleep without putting the rest of the system to sleep.</li>
+<li><code>pmset sleepnow</code> to put the entire system to sleep.</li>
+</ul>
+<h3 id="networksetup-network-settings">networksetup (network settings)</h3>
+<ul>
+<li><code>networksetup -listnetworkserviceorder</code> prints a list of available network services.</li>
+<li><code>networksetup -getinfo &lt;networkservice&gt;</code> prints info about a specified network service.</li>
+<li><code>networksetup -getdnsservers &lt;networkservice&gt;</code> prints the DNS servers for the specified network service.</li>
+<li><code>networksetup -setairportnetwork &lt;device&gt; &lt;network&gt; [password]</code> joins the specified WIFI  network. <em>The &lt;device&gt; argument should be &ldquo;en0&rdquo;</em> in most cases.</li>
+</ul>
+<h3 id="qlmanage-manage-quick-look">qlmanage (manage Quick Look)</h3>
+<ul>
+<li><code>qlmanage -p &lt;file&gt;</code> opens a Quick Look preview window of the file.</li>
+<li><code>qlmanage -m</code> prints status info about the Quick Look server process.</li>
+<li><code>qlmanage -r</code> restarts Quick Look server process.</li>
+<li><code>qlmanage -r cache</code> resets teh Quick Look thumbnail cache.</li>
+</ul>
+<h3 id="softwareupdate-os-updates">softwareupdate (OS updates)</h3>
+<ul>
+<li><code>softwareupdate --list</code> prints out all available software updates.</li>
+<li><code>sudo softwareupdate -ia</code> installs all available updates.</li>
+<li><code>softwareupdate --fetch-full-installer --full-installer-version &lt;version&gt;</code> tries to download the full installer of the specified macOS version to /Applications.</li>
+</ul>
+<p><a href="https://saurabhs.org/advanced-macos-commands">research link</a></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/cli/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">CLI</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/macos/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">macOS</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/terminal/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">terminal</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "downside154" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-dark-gray bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://downside154.github.io/" >
+    &copy;  A Random Blog with Posts 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    
+    <a href="https://github.com/downside154" target="_blank" rel="noopener" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

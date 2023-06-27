@@ -2,16 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://downside154.github.io/tags/cli/</loc>
+    <lastmod>2023-06-28T00:15:38+09:00</lastmod>
+  </url><url>
+    <loc>https://downside154.github.io/tags/macos/</loc>
+    <lastmod>2023-06-28T00:15:38+09:00</lastmod>
+  </url><url>
+    <loc>https://downside154.github.io/posts/macos_cltools/</loc>
+    <lastmod>2023-06-28T00:15:38+09:00</lastmod>
+  </url><url>
     <loc>https://downside154.github.io/posts/</loc>
-    <lastmod>2023-06-19T23:24:28+09:00</lastmod>
+    <lastmod>2023-06-28T00:15:38+09:00</lastmod>
+  </url><url>
+    <loc>https://downside154.github.io/tags/</loc>
+    <lastmod>2023-06-28T00:15:38+09:00</lastmod>
+  </url><url>
+    <loc>https://downside154.github.io/tags/terminal/</loc>
+    <lastmod>2023-06-28T00:15:38+09:00</lastmod>
   </url><url>
     <loc>https://downside154.github.io/tags/redis/</loc>
     <lastmod>2023-06-19T23:24:28+09:00</lastmod>
   </url><url>
     <loc>https://downside154.github.io/posts/redis/</loc>
-    <lastmod>2023-06-19T23:24:28+09:00</lastmod>
-  </url><url>
-    <loc>https://downside154.github.io/tags/</loc>
     <lastmod>2023-06-19T23:24:28+09:00</lastmod>
   </url><url>
     <loc>https://downside154.github.io/about/</loc>

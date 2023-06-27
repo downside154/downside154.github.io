@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>macOS on A Random Blog with Posts</title>
+    <link>https://downside154.github.io/tags/macos/</link>
+    <description>Recent content in macOS on A Random Blog with Posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Jun 2023 00:15:38 +0900</lastBuildDate><atom:link href="https://downside154.github.io/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MacOS Command Line Tools</title>
+      <link>https://downside154.github.io/posts/macos_cltools/</link>
+      <pubDate>Wed, 28 Jun 2023 00:15:38 +0900</pubDate>
+      
+      <guid>https://downside154.github.io/posts/macos_cltools/</guid>
+      <description>This post will have some command line tools used in macOS. Truth be told, I do not use ALL of these commands all of the time but I consider them useful nonetheless.
+caffeinate (sleep) caffeinate to prevent your mac from going to sleep as long as the command is running. caffeinate -u -t &amp;lt;seconds&amp;gt; to specify the time. Adding the -d flag prevents the display from going to sleep. caffeinate &amp;lt;command&amp;gt; will start the command in a new process and will prevent sleep until that process exits.</description>
+    </item>
+    
+  </channel>
+</rss>
