@@ -3,8 +3,9 @@ title: "a blog with stuff"
 date: 2023-06-19T09:55:43+09:00
 description: "home"
 tags: ["intro"]
-cascade:
-    featured_image: './images/spiderman2.jpg'
+# cascade:
+    # featured_image: './images/spiderman2.jpg'
+featured_image: './images/spiderman2.jpg'
 
 
 ananke_socials:

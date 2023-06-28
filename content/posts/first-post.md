@@ -2,7 +2,7 @@
 title: "First Post"
 date: 2023-02-17T16:18:35+09:00
 tags: ["intro", "markdown", "hugo"]
-featured_image: "/images/spiderman1.jpg"
+featured_image: "/images/gif_test.gif"
 omit_header_text: true
 ---
 
@@ -91,4 +91,4 @@ Visit the [Hugo](https://gohugo.io) website!
 testing image rendering:
 1. ![image_test](/static/images/spiderman1.jpg) doesnt seem to be working.. prob an issue with src
 2. ![image2](https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg)
-3. {{< figure src="/images/spiderman1.jpg" title="spiderman logo image render at 300px" width="600px">}}
+3. {{< figure src="/images/gif_test.gif" title="viichan gif render at 600px" width="600px">}}
