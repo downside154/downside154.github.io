@@ -3,6 +3,8 @@ title: "OOP"
 date: 2023-06-19T09:38:57+09:00
 draft: false
 tags: ["programming"]
+featured_image: "/images/gif_test.gif"
+
 ---
 
 OOP (object oriented programming) is a programming paradigm based on the concept of **objects**. Data is in the form of fields(aka. attributes or properties) and the code is in the form of procedures (aka methods).
