@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://downside154.github.io/tags/apache/</loc>
+    <lastmod>2023-07-04T15:57:49+09:00</lastmod>
+  </url><url>
+    <loc>https://downside154.github.io/posts/apache_tomcat/</loc>
+    <lastmod>2023-07-04T15:57:49+09:00</lastmod>
+  </url><url>
+    <loc>https://downside154.github.io/tags/java/</loc>
+    <lastmod>2023-07-04T15:57:49+09:00</lastmod>
+  </url><url>
+    <loc>https://downside154.github.io/posts/</loc>
+    <lastmod>2023-07-04T15:57:49+09:00</lastmod>
+  </url><url>
+    <loc>https://downside154.github.io/tags/spring/</loc>
+    <lastmod>2023-07-04T15:57:49+09:00</lastmod>
+  </url><url>
+    <loc>https://downside154.github.io/tags/</loc>
+    <lastmod>2023-07-04T15:57:49+09:00</lastmod>
+  </url><url>
+    <loc>https://downside154.github.io/tags/tomcat/</loc>
+    <lastmod>2023-07-04T15:57:49+09:00</lastmod>
+  </url><url>
     <loc>https://downside154.github.io/tags/cli/</loc>
     <lastmod>2023-06-28T00:15:38+09:00</lastmod>
   </url><url>
@@ -9,12 +30,6 @@
     <lastmod>2023-06-28T00:15:38+09:00</lastmod>
   </url><url>
     <loc>https://downside154.github.io/posts/macos_cltools/</loc>
-    <lastmod>2023-06-28T00:15:38+09:00</lastmod>
-  </url><url>
-    <loc>https://downside154.github.io/posts/</loc>
-    <lastmod>2023-06-28T00:15:38+09:00</lastmod>
-  </url><url>
-    <loc>https://downside154.github.io/tags/</loc>
     <lastmod>2023-06-28T00:15:38+09:00</lastmod>
   </url><url>
     <loc>https://downside154.github.io/tags/terminal/</loc>
@@ -41,7 +56,7 @@
     <loc>https://downside154.github.io/tags/programming/</loc>
     <lastmod>2023-06-19T09:38:57+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/posts/first-post/</loc>
+    <loc>https://downside154.github.io/posts/first_post/</loc>
     <lastmod>2023-02-17T16:18:35+09:00</lastmod>
   </url><url>
     <loc>https://downside154.github.io/tags/hugo/</loc>

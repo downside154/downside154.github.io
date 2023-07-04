@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java on A Random Blog with Posts</title>
+    <link>https://downside154.github.io/tags/java/</link>
+    <description>Recent content in java on A Random Blog with Posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Jul 2023 15:57:49 +0900</lastBuildDate><atom:link href="https://downside154.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apache Tomcat</title>
+      <link>https://downside154.github.io/posts/apache_tomcat/</link>
+      <pubDate>Tue, 04 Jul 2023 15:57:49 +0900</pubDate>
+      
+      <guid>https://downside154.github.io/posts/apache_tomcat/</guid>
+      <description>What is Apache Tomcat? In web development, Apache Tomcat is an open-source web server and servlet container. It is designed to execute Java servlets and render JavaServer Pages(JSPs) to serve dynamic web content.
+Tomcat is widely used as a web application server for hosting Java-based web applications. It provides a Java Servlet API implementation and supports the Java Enterprise Edition (Java EE) specifications. Developers can write servlets and JSPs, which are Java-based components, and deploy them on Tomcat for execution.</description>
+    </item>
+    
+  </channel>
+</rss>

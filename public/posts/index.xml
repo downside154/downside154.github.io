@@ -6,7 +6,17 @@
     <description>Recent content in Posts on A Random Blog with Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Jun 2023 00:15:38 +0900</lastBuildDate><atom:link href="https://downside154.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Jul 2023 15:57:49 +0900</lastBuildDate><atom:link href="https://downside154.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apache Tomcat</title>
+      <link>https://downside154.github.io/posts/apache_tomcat/</link>
+      <pubDate>Tue, 04 Jul 2023 15:57:49 +0900</pubDate>
+      
+      <guid>https://downside154.github.io/posts/apache_tomcat/</guid>
+      <description>What is Apache Tomcat? In web development, Apache Tomcat is an open-source web server and servlet container. It is designed to execute Java servlets and render JavaServer Pages(JSPs) to serve dynamic web content.
+Tomcat is widely used as a web application server for hosting Java-based web applications. It provides a Java Servlet API implementation and supports the Java Enterprise Edition (Java EE) specifications. Developers can write servlets and JSPs, which are Java-based components, and deploy them on Tomcat for execution.</description>
+    </item>
+    
     <item>
       <title>MacOS Command Line Tools</title>
       <link>https://downside154.github.io/posts/macos_cltools/</link>
@@ -41,10 +51,10 @@ Object Oriented Positioning Object Oriented Programming Out of Position Ordinary
     
     <item>
       <title>First Post</title>
-      <link>https://downside154.github.io/posts/first-post/</link>
+      <link>https://downside154.github.io/posts/first_post/</link>
       <pubDate>Fri, 17 Feb 2023 16:18:35 +0900</pubDate>
       
-      <guid>https://downside154.github.io/posts/first-post/</guid>
+      <guid>https://downside154.github.io/posts/first_post/</guid>
       <description>Introduction : Test Post As the first post of this blog. It seems only fitting that this be the place where I test out the features of Hugo.
 Testing This is bold text, and this is emphasized text.
 Table
