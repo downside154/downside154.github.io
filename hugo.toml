@@ -4,17 +4,18 @@ languageCode = "en-us"
 theme = "ananke"
 
 SectionPagesMenu = "main"
-Paginate = 15
+Paginate = 10
 googleAnalytics = ""
 enableRobotsTXT = true
 
+# comments
 disqusShortname = "downside154"
 
 [params]
     description = ""
   # choose a background color from any on this page: https://tachyons.io/docs/themes/skins/ and preface it with "bg-"
     background_color_class = "bg-dark-gray"
-    recent_post_number = 10
+    recent_posts_number = 100
 
 [[params.ananke_socials]]
 name = "github"
