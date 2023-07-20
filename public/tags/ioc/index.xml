@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>programming on A Random Blog with Posts</title>
-    <link>https://downside154.github.io/tags/programming/</link>
-    <description>Recent content in programming on A Random Blog with Posts</description>
+    <title>IoC on A Random Blog with Posts</title>
+    <link>https://downside154.github.io/tags/ioc/</link>
+    <description>Recent content in IoC on A Random Blog with Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Jul 2023 12:32:52 +0900</lastBuildDate><atom:link href="https://downside154.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Jul 2023 12:32:52 +0900</lastBuildDate><atom:link href="https://downside154.github.io/tags/ioc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>IoC</title>
       <link>https://downside154.github.io/posts/ioc/</link>
@@ -15,17 +15,6 @@
       <guid>https://downside154.github.io/posts/ioc/</guid>
       <description>Summary Infrastructure as code (IaC) is an approach to managing and provisioning infrastructure resources through software and automated processes, rather than manual processes. It involves using machine-readable configuration files or scripts to define and control the infrastructure, treating it as code. With IaC, infrastructure resources such as networks, compute services, databases, and storage can be defined, managed, and deployed in a standardized, versioned, and parameterized manner.
 Imperative vs Declarative IaC IaC allows you to define your infrastructure resources in a descriptive model, specifying the desired outcome rather than the specific steps to achieve it.</description>
-    </item>
-    
-    <item>
-      <title>OOP</title>
-      <link>https://downside154.github.io/posts/oop/</link>
-      <pubDate>Mon, 19 Jun 2023 09:38:57 +0900</pubDate>
-      
-      <guid>https://downside154.github.io/posts/oop/</guid>
-      <description>OOP (object oriented programming) is a programming paradigm based on the concept of objects. Data is in the form of fields(aka. attributes or properties) and the code is in the form of procedures (aka methods).
-OOP Concepts Random fact of the day: The acronym OOP can refer to a lot of things, even as a jargon for software developers.
-Object Oriented Positioning Object Oriented Programming Out of Position Ordinary Object Pointer (JDK) </description>
     </item>
     
   </channel>
