@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>server on A Random Blog with Posts</title>
+    <link>https://downside154.github.io/tags/server/</link>
+    <description>Recent content in server on A Random Blog with Posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 12 Aug 2023 20:50:32 +0900</lastBuildDate><atom:link href="https://downside154.github.io/tags/server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web Application Server(WAS)</title>
+      <link>https://downside154.github.io/posts/was/</link>
+      <pubDate>Sat, 12 Aug 2023 20:50:32 +0900</pubDate>
+      
+      <guid>https://downside154.github.io/posts/was/</guid>
+      <description>HTTP all web broswers communicate through HTTP client -&amp;gt; internet -&amp;gt; server
+Server vs WAS(web application server) Web Server - HTTP, static content(HTML, CSS, JS, IMAGES, VIDEO), etc&amp;hellip;. in simple terms, it&amp;rsquo;s a server that hosts and serves content to the client, used for simple tasks like servic static files, managing client connections, and handling basic request-response. ex: NGINX, APACHE WAS - Web Server + dynamic content, runs application logic code to provide dynamic HTML, API (JSON), SERVLET, JSP, SPRING MVC WAS provides an environment where developers can build, deploy, and run applications that process and generate dynamic content.</description>
+    </item>
+    
+  </channel>
+</rss>
