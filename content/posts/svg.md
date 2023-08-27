@@ -3,6 +3,8 @@ title: "SVG(Scalable Vector Graphics)"
 date: 2023-08-27T14:48:47+09:00
 draft: false
 tags: ["FE"]
+featured_image: "/images/svg_heart_vector.png"
+
 ---
 
 
