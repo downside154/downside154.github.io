@@ -13,8 +13,8 @@
       <pubDate>Sat, 12 Aug 2023 20:50:32 +0900</pubDate>
       
       <guid>https://downside154.github.io/posts/was/</guid>
-      <description>HTTP all web broswers communicate through HTTP client -&amp;gt; internet -&amp;gt; server
-Server vs WAS(web application server) Web Server - HTTP, static content(HTML, CSS, JS, IMAGES, VIDEO), etc&amp;hellip;. in simple terms, it&amp;rsquo;s a server that hosts and serves content to the client, used for simple tasks like servic static files, managing client connections, and handling basic request-response. ex: NGINX, APACHE WAS - Web Server + dynamic content, runs application logic code to provide dynamic HTML, API (JSON), SERVLET, JSP, SPRING MVC WAS provides an environment where developers can build, deploy, and run applications that process and generate dynamic content.</description>
+      <description>HTTP all web browsers communicate through HTTP client -&amp;gt; internet -&amp;gt; server
+Server vs WAS(web application server) Web Server - HTTP, static content(HTML, CSS, JS, IMAGES, VIDEO), etc&amp;hellip;. in simple terms, it&amp;rsquo;s a server that hosts and serves content to the client, used for simple tasks like serving static files, managing client connections, and handling basic request-response. ex: NGINX, APACHE WAS - Web Server + dynamic content, runs application logic code to provide dynamic HTML, API (JSON), SERVLET, JSP, SPRING MVC WAS provides an environment where developers can build, deploy, and run applications that process and generate dynamic content.</description>
     </item>
     
   </channel>

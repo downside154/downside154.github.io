@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FE on A Random Blog with Posts</title>
+    <link>https://downside154.github.io/tags/fe/</link>
+    <description>Recent content in FE on A Random Blog with Posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Aug 2023 14:48:47 +0900</lastBuildDate><atom:link href="https://downside154.github.io/tags/fe/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SVG(Scalable Vector Graphics)</title>
+      <link>https://downside154.github.io/posts/svg/</link>
+      <pubDate>Sun, 27 Aug 2023 14:48:47 +0900</pubDate>
+      
+      <guid>https://downside154.github.io/posts/svg/</guid>
+      <description>Introduction Deep dive into SVG SVG code for an icon is usually made up of a bunch of path elements with d attribute(aka. path data).
+Path Data The d attribute is a series of commands that tell the browser how the path should be drawn. Below is an example of a d attribute cleaned up:
+All path commands follow the same basic syntax - a single letter code followed by a series of numbers.</description>
+    </item>
+    
+  </channel>
+</rss>

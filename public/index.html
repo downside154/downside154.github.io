@@ -153,13 +153,39 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/posts/svg/" class="color-inherit dim link">
+            SVG(Scalable Vector Graphics)
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          Introduction Deep dive into SVG SVG code for an icon is usually made up of a bunch of path elements with d attribute(aka. path data).
+Path Data The d attribute is a series of commands that tell the browser how the path should be drawn. Below is an example of a d attribute cleaned up:
+All path commands follow the same basic syntax - a single letter code followed by a series of numbers.
+        </div>
+          <a href="/posts/svg/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/posts/was/" class="color-inherit dim link">
             Web Application Server(WAS)
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          HTTP all web broswers communicate through HTTP client -&gt; internet -&gt; server
-Server vs WAS(web application server) Web Server - HTTP, static content(HTML, CSS, JS, IMAGES, VIDEO), etc&hellip;. in simple terms, it&rsquo;s a server that hosts and serves content to the client, used for simple tasks like servic static files, managing client connections, and handling basic request-response. ex: NGINX, APACHE WAS - Web Server + dynamic content, runs application logic code to provide dynamic HTML, API (JSON), SERVLET, JSP, SPRING MVC WAS provides an environment where developers can build, deploy, and run applications that process and generate dynamic content.
+          HTTP all web browsers communicate through HTTP client -&gt; internet -&gt; server
+Server vs WAS(web application server) Web Server - HTTP, static content(HTML, CSS, JS, IMAGES, VIDEO), etc&hellip;. in simple terms, it&rsquo;s a server that hosts and serves content to the client, used for simple tasks like serving static files, managing client connections, and handling basic request-response. ex: NGINX, APACHE WAS - Web Server + dynamic content, runs application logic code to provide dynamic HTML, API (JSON), SERVLET, JSP, SPRING MVC WAS provides an environment where developers can build, deploy, and run applications that process and generate dynamic content.
         </div>
           <a href="/posts/was/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
@@ -258,39 +284,6 @@ Tomcat is widely used as a web application server for hosting Java-based web app
 caffeinate (sleep) caffeinate to prevent your mac from going to sleep as long as the command is running. caffeinate -u -t &lt;seconds&gt; to specify the time. Adding the -d flag prevents the display from going to sleep. caffeinate &lt;command&gt; will start the command in a new process and will prevent sleep until that process exits.
         </div>
           <a href="/posts/macos_cltools/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-          
-        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
-          <a href="/posts/redis/" class="db grow">
-            <img src="https://downside154.github.io/images/redis1.png" class="img" alt="image from Redis">
-          </a>
-        </div>
-      
-      <div class="blah w-100 w-60-ns pl3-ns">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/redis/" class="color-inherit dim link">
-            Redis
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          레디스 클러스터란? 데이터의 고가용성 및 확장성을 위한 분산 아키텍처, Redis 클러스터 모드는 여러 개의 물리적 노드로 Redis 데이터를 분산하여 저장하고, 장애 조치 기능을 제공 (Redis 클러스터는 마스터-슬레이브 레플리케이션을 사용 마스터 노드가 장애나더라도 슬레이브 중 하나를 마스터로 승격 시켜 장애에 대비)
-레디스 센티넬이란? 마스터-슬레이브 기반의 단일 서버 아키텍처, 센티넬은 마스터 인스턴스를 모니터링하고 장애 시 슬레이브 중 하나를 새로운 마스터로 승격 시켜 장애에 대한 대비가 가능
-레디스 클러스터는 센티넬에 비해 물리적인 노드를 직접 늘리기 때문에 전체 Redis가 장애가 나더라도 단일 노드에 비해 안전하며 분산 저장과 부하 분산을 이용하여 훨씬 가용성도 좋습니다.
-        </div>
-          <a href="/posts/redis/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
