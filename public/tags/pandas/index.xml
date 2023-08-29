@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pandas on A Random Blog with Posts</title>
+    <link>https://downside154.github.io/tags/pandas/</link>
+    <description>Recent content in pandas on A Random Blog with Posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 28 Aug 2023 17:54:30 +0900</lastBuildDate><atom:link href="https://downside154.github.io/tags/pandas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pandas</title>
+      <link>https://downside154.github.io/posts/pandas/</link>
+      <pubDate>Mon, 28 Aug 2023 17:54:30 +0900</pubDate>
+      
+      <guid>https://downside154.github.io/posts/pandas/</guid>
+      <description>Introduction Pandas is an open-source python data analysis library created by Wes McKinney for quantitative finance (hence it&amp;rsquo;s name pandas from &amp;ldquo;panel data&amp;rdquo;, an econometrics term for data sets that include observations over multiple time periods). It was initially released on January 11th, 2008 and continues to be one of the most popular python tools used when handing data sets nowadays.</description>
+    </item>
+    
+  </channel>
+</rss>

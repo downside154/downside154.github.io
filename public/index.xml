@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 19 Jun 2023 09:55:43 +0900</lastBuildDate><atom:link href="https://downside154.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Pandas</title>
+      <link>https://downside154.github.io/posts/pandas/</link>
+      <pubDate>Mon, 28 Aug 2023 17:54:30 +0900</pubDate>
+      
+      <guid>https://downside154.github.io/posts/pandas/</guid>
+      <description>Introduction Pandas is an open-source python data analysis library created by Wes McKinney for quantitative finance (hence it&amp;rsquo;s name pandas from &amp;ldquo;panel data&amp;rdquo;, an econometrics term for data sets that include observations over multiple time periods). It was initially released on January 11th, 2008 and continues to be one of the most popular python tools used when handing data sets nowadays.</description>
+    </item>
+    
+    <item>
       <title>SVG(Scalable Vector Graphics)</title>
       <link>https://downside154.github.io/posts/svg/</link>
       <pubDate>Sun, 27 Aug 2023 14:48:47 +0900</pubDate>
