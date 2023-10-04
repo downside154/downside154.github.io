@@ -24,3 +24,10 @@ Pandas is an open-source python data analysis library created by **Wes McKinney*
 3. 3 dimensional : WidePanel, LongPanel -> Deprecated for multi-index
     - Behave as a dict of DataMatrix objects
     - Three indices: items, major_axis, minor_axis
+
+### matplotlib library
+Pandas has by default the matplotlib library that allows visual representation of dataframes thorugh 
+```python
+dm.plot(); legend()
+```
+to create line graphs, bar graphs, histograms, and so on.
