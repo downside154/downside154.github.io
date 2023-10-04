@@ -1,9 +1,9 @@
 ---
-title: "IoC"
+title: "IaC"
 date: 2023-07-19T12:32:52+09:00
 draft: false
-tags: ["programming", "IoC"]
-featured_image: "/images/ioc.jpeg"
+tags: ["programming", "IaC"]
+featured_image: "/images/iac.jpeg"
 ---
 
 ## Summary
