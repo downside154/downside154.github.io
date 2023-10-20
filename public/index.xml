@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>a blog with stuff on A Random Blog with Posts</title>
+    <title>downside154&#39;s 기술 블로그 on A Random Blog with Posts</title>
     <link>https://downside154.github.io/</link>
-    <description>Recent content in a blog with stuff on A Random Blog with Posts</description>
+    <description>Recent content in downside154&#39;s 기술 블로그 on A Random Blog with Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 19 Jun 2023 09:55:43 +0900</lastBuildDate><atom:link href="https://downside154.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Multi-threading with nodejs</title>
+      <link>https://downside154.github.io/posts/multi_thread_nodejs/</link>
+      <pubDate>Fri, 20 Oct 2023 16:49:20 +0900</pubDate>
+      
+      <guid>https://downside154.github.io/posts/multi_thread_nodejs/</guid>
+      <description>Overview What is Multithreading How does Node.js handle asynchronous operations. How to use Node&amp;rsquo;s worker-threads module to create and manage threads. History Computers are becoming more powerful thanks to GPUs and multi-cre CPUs, and modern applications leverage threads(independent execution units in a process) to maximize application performance
+However, JavaScript is a synchronous, blocking, single-threaded language. It was initially created to run on browsers, allowing for much of modern web page interactions, form validations, animations, and so on.</description>
+    </item>
+    
+    <item>
+      <title>Python Enviroment</title>
+      <link>https://downside154.github.io/posts/python_enviroment/</link>
+      <pubDate>Tue, 03 Oct 2023 23:18:10 +0900</pubDate>
+      
+      <guid>https://downside154.github.io/posts/python_enviroment/</guid>
+      <description>Anaconda Anaconda(python distributor) anaconda download link
+Anaconda is a distribution of the Python and R programming languages that aims to simplify package management and deployment. It was initially released in July 17, 2021 by Continuum analytics under the Freemium license but other editions are SaaS.
+Google Colaboratory (Colab) Google Colaboratory Colab allows users to write and execute python code on the browser. It is used by students, DS, AI programmers, and many more due to its ease of use.</description>
+    </item>
+    
     <item>
       <title>Pandas</title>
       <link>https://downside154.github.io/posts/pandas/</link>
@@ -39,7 +60,7 @@ Server vs WAS(web application server) Web Server - HTTP, static content(HTML, CS
     </item>
     
     <item>
-      <title>IoC</title>
+      <title>IaC</title>
       <link>https://downside154.github.io/posts/ioc/</link>
       <pubDate>Wed, 19 Jul 2023 12:32:52 +0900</pubDate>
       

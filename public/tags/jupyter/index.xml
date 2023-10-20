@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jupyter on A Random Blog with Posts</title>
+    <link>https://downside154.github.io/tags/jupyter/</link>
+    <description>Recent content in jupyter on A Random Blog with Posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Oct 2023 23:18:10 +0900</lastBuildDate><atom:link href="https://downside154.github.io/tags/jupyter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python Enviroment</title>
+      <link>https://downside154.github.io/posts/python_enviroment/</link>
+      <pubDate>Tue, 03 Oct 2023 23:18:10 +0900</pubDate>
+      
+      <guid>https://downside154.github.io/posts/python_enviroment/</guid>
+      <description>Anaconda Anaconda(python distributor) anaconda download link
+Anaconda is a distribution of the Python and R programming languages that aims to simplify package management and deployment. It was initially released in July 17, 2021 by Continuum analytics under the Freemium license but other editions are SaaS.
+Google Colaboratory (Colab) Google Colaboratory Colab allows users to write and execute python code on the browser. It is used by students, DS, AI programmers, and many more due to its ease of use.</description>
+    </item>
+    
+  </channel>
+</rss>

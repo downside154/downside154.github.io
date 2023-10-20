@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Multi-threading with nodejs | A Random Blog with Posts</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Overview What is Multithreading How does Node.js handle asynchronous operations. How to use Node&rsquo;s worker-threads module to create and manage threads. History Computers are becoming more powerful thanks to GPUs and multi-cre CPUs, and modern applications leverage threads(independent execution units in a process) to maximize application performance
+However, JavaScript is a synchronous, blocking, single-threaded language. It was initially created to run on browsers, allowing for much of modern web page interactions, form validations, animations, and so on.">
+    <meta name="generator" content="Hugo 0.119.0">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Multi-threading with nodejs" />
+<meta property="og:description" content="Overview What is Multithreading How does Node.js handle asynchronous operations. How to use Node&rsquo;s worker-threads module to create and manage threads. History Computers are becoming more powerful thanks to GPUs and multi-cre CPUs, and modern applications leverage threads(independent execution units in a process) to maximize application performance
+However, JavaScript is a synchronous, blocking, single-threaded language. It was initially created to run on browsers, allowing for much of modern web page interactions, form validations, animations, and so on." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://downside154.github.io/posts/multi_thread_nodejs/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-10-20T16:49:20+09:00" />
+<meta property="article:modified_time" content="2023-10-20T16:49:20+09:00" />
+<meta itemprop="name" content="Multi-threading with nodejs">
+<meta itemprop="description" content="Overview What is Multithreading How does Node.js handle asynchronous operations. How to use Node&rsquo;s worker-threads module to create and manage threads. History Computers are becoming more powerful thanks to GPUs and multi-cre CPUs, and modern applications leverage threads(independent execution units in a process) to maximize application performance
+However, JavaScript is a synchronous, blocking, single-threaded language. It was initially created to run on browsers, allowing for much of modern web page interactions, form validations, animations, and so on."><meta itemprop="datePublished" content="2023-10-20T16:49:20+09:00" />
+<meta itemprop="dateModified" content="2023-10-20T16:49:20+09:00" />
+<meta itemprop="wordCount" content="1104">
+<meta itemprop="keywords" content="Node," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Multi-threading with nodejs"/>
+<meta name="twitter:description" content="Overview What is Multithreading How does Node.js handle asynchronous operations. How to use Node&rsquo;s worker-threads module to create and manage threads. History Computers are becoming more powerful thanks to GPUs and multi-cre CPUs, and modern applications leverage threads(independent execution units in a process) to maximize application performance
+However, JavaScript is a synchronous, blocking, single-threaded language. It was initially created to run on browsers, allowing for much of modern web page interactions, form validations, animations, and so on."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  <header class="cover bg-top" style="background-image: url('https://downside154.github.io/images/node.png');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        A Random Blog with Posts
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    
+    <a href="https://github.com/downside154" target="_blank" rel="noopener" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">Multi-threading with nodejs</div>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Multi-threading with nodejs</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2023-10-20T16:49:20+09:00">October 20, 2023</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="overview">Overview</h2>
+<ol>
+<li>What is Multithreading</li>
+<li>How does Node.js handle asynchronous operations.</li>
+<li>How to use Node&rsquo;s <code>worker-threads</code> module to create and manage threads.</li>
+</ol>
+<h3 id="history">History</h3>
+<p>Computers are becoming more powerful thanks to GPUs and multi-cre CPUs, and modern applications leverage <strong>threads(independent execution units in a process)</strong> to maximize application performance</p>
+<p>However, <strong>JavaScript is a synchronous, blocking, single-threaded language</strong>. It was initially created to run on browsers, allowing for much of modern web page interactions, form validations, animations, and so on. Running operations on a single thread can block the synchronous execution flow and result in bottlenecks.</p>
+<p>Ryan Dahl made Node.js to avoid using threads:</p>
+<ul>
+<li>
+<p><em>&ldquo;Thread-based networking is relatively inefficient and very difficult to use. Furthermore, users of Node.js are free from worries of dead-locking the process, since there are no locks.&rdquo; - Ryan Dahl, creator of Node.js</em></p>
+</li>
+<li>
+<p><em>&ldquo;Almost no function in Node.js directly performs I/O, so the process never blocks except when the I/O is performed using synchronous methods of the Node.js standard library. Because nothing blocks, scalable systems are very reasonable to develop in Node.js.</em></p>
+</li>
+</ul>
+<hr>
+<h3 id="what-is-multithreading">What is Multithreading?</h3>
+<p><strong>Multithreading</strong> is a program execution model that allows multiple threads to be created within a process. The threads execute independently but concurrently share process resources.</p>
+<h4 id="single-thread-vs-multithreading">Single thread vs Multithreading</h4>
+<p>We need to understand both single thread and multithread processes to know their differences.</p>
+<p>Assume that there are four tasks that a process needs to perform.</p>
+<p>A single thread process would execute the tasks one by one as the image below. Each execution needs to wait for the preceding operation to start executing.
+<figure><img src="/images/single_thread.png" width="600px"/>
+</figure>
+</p>
+<p>However in a multithreaded process, the tasks can run concurrently in different threads as the image below.
+<figure><img src="/images/multi_thread.png" width="600px"/>
+</figure>
+</p>
+<h4 id="is-nodejs-single-threaded">Is Node.js Single Threaded?</h4>
+<p>Depends. If you use Node.js, you will probably be using more than a single thread.</p>
+<p>When Node.js encounters operations that can prevent other operations from running (ex: reading data from a database, file operations), it delegates them to a separate pool of threads managed by a C library known as <code>libuv</code>.</p>
+<p><strong>Node.js is single-threaded at its base, but it can run some operations in parallel</strong>. We cannot create threads that share the same &lsquo;context&rsquo; though.</p>
+<h3 id="running-parallel-child-processes">Running Parallel Child Processes</h3>
+<p>We spin up a child process using Node&rsquo;s <code>child_process</code> module. The spun-up child processes or subprocesses can communicate through a messaging system. They run separately, allowing you to divide and run your application script from different processes.</p>
+<p>A <code>child_process</code>provides four different ways to create a child:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#ae81ff">1.</span>   <span style="color:#a6e22e">spawn</span>()
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2.</span>   <span style="color:#a6e22e">exec</span>()
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3.</span>   <span style="color:#a6e22e">execFile</span>()
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4.</span>   <span style="color:#a6e22e">fork</span>()
+</span></span></code></pre></div><p><strong>A Quick demo using the <code>fork()</code> method.</strong></p>
+<p>The <code>fork()</code> method allows you to create a child process that&rsquo;s connected to the main process currently running your code. It accepts the following three parameters:</p>
+<ul>
+<li>a module path <code>string</code> for a JS file to execute on the child process (required)</li>
+<li>an <code>array</code> of <code>string</code>s to pass as the child processes&rsquo; arguments</li>
+<li>The options <code>object</code> to pass to the child process</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">fork</span>(<span style="color:#e6db74">&#34;sub.js&#34;</span>, [<span style="color:#e6db74">&#34;arguments&#34;</span>], { <span style="color:#a6e22e">cwd</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">cwd</span>() });
+</span></span></code></pre></div><p>Let&rsquo;s create the <code>main.js</code> file, import the <code>child_process</code> module, and create a child process from a fork.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// main.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">child_proc</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;child_process&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;running main.js&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sub</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">child_proc</span>.<span style="color:#a6e22e">fork</span>(<span style="color:#e6db74">&#34;./sub.js&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// sending message to subprocess
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">sub</span>.<span style="color:#a6e22e">send</span>({ <span style="color:#a6e22e">from</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;parent&#34;</span> });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// listening to message from subprocess
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">sub</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;message&#34;</span>, (<span style="color:#a6e22e">message</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;PARENT got message from &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">from</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">sub</span>.<span style="color:#a6e22e">disconnect</span>();
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>Then we&rsquo;ll create a subprocess file — <code>sub.js</code> — in the same directory as <code>main.js</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// sub.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;sub.js is running&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// subprocess sending message to parent
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">send</span>({ <span style="color:#a6e22e">from</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;client&#34;</span> });
+</span></span><span style="display:flex;"><span>}, <span style="color:#ae81ff">2000</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// subprocess listening to message from parent
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;message&#34;</span>, (<span style="color:#a6e22e">message</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;SUBPROCESS got message from &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">message</span>.<span style="color:#a6e22e">from</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>Run <code>main.js</code>, which will print this in your terminal:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>running main.js
+</span></span><span style="display:flex;"><span>sub.js is running
+</span></span><span style="display:flex;"><span>SUBPROCESS got message from parent
+</span></span><span style="display:flex;"><span>PARENT got message from client
+</span></span></code></pre></div><p>What we&rsquo;ve done is called <strong>multiprocessing</strong>. As the name implies, it&rsquo;s different from multithreading because we are creating more processes.</p>
+<p>In <strong>multithreading</strong>, a single process can have multiple code segments (threads) that run currently within the process.</p>
+<p>In <strong>multiprocessing</strong>, the creation of a process is slow and resource-specific. In <strong>multithreading</strong>, however, it&rsquo;s economical to create a thread.</p>
+<h4 id="what-are-worker-threads">What are Worker Threads?</h4>
+<p>Worker threads can run CPU-intensive JavaScript operations without blocking the event loop from running.
+Unlike <code>child_process</code>, <code>worker_threads</code> can share memory by transferring ArrayBuffer instances or sharing <code>SharedArrayBuffer</code> instances.</p>
+<h4 id="how-to-use-worker-threads-in-nodejs">How to Use Worker Threads in Node.js</h4>
+<p><code>worker_threads</code> became available in Node.js 10.5.0. Before this version, you couldn&rsquo;t access the module unless you ran the Node.js program using the <code>--experimental-worker</code> flag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ node app.js --experimental-worker
+</span></span></code></pre></div><p>Keep in mind this word of wisdom from the Node.js documentation
+<em>&ldquo;Workers (threads) are useful for performing CPU-intensive JavaScript operations. They do not help much with I/O-intensive work. The Node.js built-in asynchronous I/O operations are more efficient than Workers can be.&rdquo;</em></p>
+<hr>
+<p>Let’s create a simple example where we have a main file, make a worker thread from another file, and give the thread some data.</p>
+<p>First,  create the main file, <code>main.js</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">Worker</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;worker_threads&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">doSomethingCPUIntensive</span>(<span style="color:#a6e22e">name</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">worker</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Worker</span>(<span style="color:#e6db74">&#34;./sub.js&#34;</span>, { <span style="color:#a6e22e">workerData</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">name</span> } });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">worker</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;message&#34;</span>, <span style="color:#a6e22e">resolve</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">worker</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;error&#34;</span>, <span style="color:#a6e22e">reject</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">worker</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;exit&#34;</span>, (<span style="color:#a6e22e">code</span>) =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">code</span> <span style="color:#f92672">!==</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">reject</span>(<span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">`stopped with exit code </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">code</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>));
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">async</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">doSomethingCPUIntensive</span>(<span style="color:#e6db74">&#34;John&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Parent: &#34;</span>, <span style="color:#a6e22e">result</span>);
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">err</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">err</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>})();
+</span></span></code></pre></div><p>We create a worker by passing in the path to a file as the first argument and data as the second argument (the data passed is a clone, so we cannot refer to it from the worker thread).</p>
+<p>Then we can listen to a series of events from the worker and act accordingly. For instance, if the worker thread is stopped, we can derive the <code>exit code</code>.</p>
+<p>Next, we create a worker thread module script which, in our case, will be called <code>sub.js</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// sub.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">workerData</span>, <span style="color:#a6e22e">parentPort</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;worker_threads&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// you can do intensive synchronous stuff here
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">theCPUIntensiveTask</span>(<span style="color:#a6e22e">name</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`Hello World </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">intensiveResult</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">theCPUIntensiveTask</span>(<span style="color:#a6e22e">workerData</span>.<span style="color:#a6e22e">name</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">parentPort</span>.<span style="color:#a6e22e">postMessage</span>({ <span style="color:#a6e22e">intensiveResult</span> });
+</span></span></code></pre></div><p><code>workerData</code> receives data that&rsquo;s passed when the worker is created, and <code>parentPort</code> provides a method to return the result of <code>theCPUIntensiveTask</code>.</p>
+<p>The worker thread is a great tool to run CPU-intensive operations, and can get much more complex than in the simple example above.</p>
+<p>If you are running a Node.js version older than Node.js 11.7, use the <code>--experimental-worker</code> flag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ node --experimental-worker main.js
+</span></span></code></pre></div><p>Running the script prints:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Parent:  <span style="color:#f92672">{</span> intensiveResult: <span style="color:#e6db74">&#39;Hello World John&#39;</span> <span style="color:#f92672">}</span>
+</span></span></code></pre></div><h3 id="conclusion">Conclusion</h3>
+<p>Even though Node doesn’t traditionally support multithreading, worker threads provide a nice workaround (without the potential errors of race conditions common in threads).</p>
+<hr>
+<p>Acknowledgement
+<a href="https://blog.appsignal.com/2022/07/20/an-introduction-to-multithreading-in-nodejs.html">link 1</a>
+<a href="https://blog.appsignal.com/2023/07/05/multithreading-with-worker-threads-in-nodejs.html">link 2</a></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/node/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Node</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "downside154" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-dark-gray bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://downside154.github.io/" >
+    &copy;  A Random Blog with Posts 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    
+    <a href="https://github.com/downside154" target="_blank" rel="noopener" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
