@@ -6,195 +6,161 @@
     <description>Recent content in Tags on A Random Blog with Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Oct 2023 16:49:20 +0900</lastBuildDate><atom:link href="https://downside154.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Oct 2023 17:46:49 +0900</lastBuildDate>
+    <atom:link href="https://downside154.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Node</title>
+      <title>database</title>
+      <link>https://downside154.github.io/tags/database/</link>
+      <pubDate>Fri, 20 Oct 2023 17:46:49 +0900</pubDate>
+      <guid>https://downside154.github.io/tags/database/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>node</title>
       <link>https://downside154.github.io/tags/node/</link>
       <pubDate>Fri, 20 Oct 2023 16:49:20 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/node/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>anaconda</title>
       <link>https://downside154.github.io/tags/anaconda/</link>
       <pubDate>Tue, 03 Oct 2023 23:18:10 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/anaconda/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>colab</title>
       <link>https://downside154.github.io/tags/colab/</link>
       <pubDate>Tue, 03 Oct 2023 23:18:10 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/colab/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>jupyter</title>
       <link>https://downside154.github.io/tags/jupyter/</link>
       <pubDate>Tue, 03 Oct 2023 23:18:10 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/jupyter/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>pandas</title>
       <link>https://downside154.github.io/tags/pandas/</link>
       <pubDate>Tue, 03 Oct 2023 23:18:10 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/pandas/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>python</title>
       <link>https://downside154.github.io/tags/python/</link>
       <pubDate>Tue, 03 Oct 2023 23:18:10 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/python/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>FE</title>
       <link>https://downside154.github.io/tags/fe/</link>
       <pubDate>Sun, 27 Aug 2023 14:48:47 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/fe/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>server</title>
       <link>https://downside154.github.io/tags/server/</link>
       <pubDate>Sat, 12 Aug 2023 20:50:32 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/server/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>IaC</title>
       <link>https://downside154.github.io/tags/iac/</link>
       <pubDate>Wed, 19 Jul 2023 12:32:52 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/iac/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>programming</title>
       <link>https://downside154.github.io/tags/programming/</link>
       <pubDate>Wed, 19 Jul 2023 12:32:52 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/programming/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>apache</title>
       <link>https://downside154.github.io/tags/apache/</link>
       <pubDate>Tue, 04 Jul 2023 15:57:49 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/apache/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>java</title>
       <link>https://downside154.github.io/tags/java/</link>
       <pubDate>Tue, 04 Jul 2023 15:57:49 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/java/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>spring</title>
       <link>https://downside154.github.io/tags/spring/</link>
       <pubDate>Tue, 04 Jul 2023 15:57:49 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/spring/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>tomcat</title>
       <link>https://downside154.github.io/tags/tomcat/</link>
       <pubDate>Tue, 04 Jul 2023 15:57:49 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/tomcat/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>CLI</title>
       <link>https://downside154.github.io/tags/cli/</link>
       <pubDate>Wed, 28 Jun 2023 00:15:38 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/cli/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>macOS</title>
       <link>https://downside154.github.io/tags/macos/</link>
       <pubDate>Wed, 28 Jun 2023 00:15:38 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/macos/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>terminal</title>
       <link>https://downside154.github.io/tags/terminal/</link>
       <pubDate>Wed, 28 Jun 2023 00:15:38 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/terminal/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>home</title>
       <link>https://downside154.github.io/tags/home/</link>
       <pubDate>Mon, 19 Jun 2023 09:55:43 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/home/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>hugo</title>
       <link>https://downside154.github.io/tags/hugo/</link>
       <pubDate>Fri, 17 Feb 2023 16:18:35 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/hugo/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>intro</title>
       <link>https://downside154.github.io/tags/intro/</link>
       <pubDate>Fri, 17 Feb 2023 16:18:35 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/intro/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>markdown</title>
       <link>https://downside154.github.io/tags/markdown/</link>
       <pubDate>Fri, 17 Feb 2023 16:18:35 +0900</pubDate>
-      
       <guid>https://downside154.github.io/tags/markdown/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

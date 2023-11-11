@@ -6,18 +6,17 @@
     <description>Recent content in markdown on A Random Blog with Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Feb 2023 16:18:35 +0900</lastBuildDate><atom:link href="https://downside154.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Feb 2023 16:18:35 +0900</lastBuildDate>
+    <atom:link href="https://downside154.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First Post</title>
       <link>https://downside154.github.io/posts/first_post/</link>
       <pubDate>Fri, 17 Feb 2023 16:18:35 +0900</pubDate>
-      
       <guid>https://downside154.github.io/posts/first_post/</guid>
       <description>Introduction : Test Post As the first post of this blog. It seems only fitting that this be the place where I test out the features of Hugo.
 Testing This is bold text, and this is emphasized text.
 Table
 test1 test2 test3 test4 test5 6 7 8 9 10 11 12 13 14 15 checking if extended markdown works. ==yea== it~does~ work^2^ :joy: highlight, subscript, superscript, emoji markdown not working Trie code in python</description>
     </item>
-    
   </channel>
 </rss>

@@ -2,7 +2,7 @@
 title: "Multi-threading with nodejs"
 date: 2023-10-20T16:49:20+09:00
 draft: false
-tags: ["Node"]
+tags: ["node"]
 featured_image: "/images/node.png"
 ---
 

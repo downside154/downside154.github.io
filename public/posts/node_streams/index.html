@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Node.Js Streams | A Random Blog with Posts</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Intro Node.js has a built-in support for streams. Streams are a fundamental concept in Node.js that enable efficient data handling, esp when dealing with large amounts of information OR working with data in real time.
+Summary:
+Explore the concept of streams in Node.js Understand the different types of streams available (Readable, Writable, Duplex, and Transform) Discuss best practices for working with streams effectively. What are Node.js Streams? Streams enable efficient data handling by reading or writing input/output sequentially.">
+    <meta name="generator" content="Hugo 0.120.4">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Node.Js Streams" />
+<meta property="og:description" content="Intro Node.js has a built-in support for streams. Streams are a fundamental concept in Node.js that enable efficient data handling, esp when dealing with large amounts of information OR working with data in real time.
+Summary:
+Explore the concept of streams in Node.js Understand the different types of streams available (Readable, Writable, Duplex, and Transform) Discuss best practices for working with streams effectively. What are Node.js Streams? Streams enable efficient data handling by reading or writing input/output sequentially." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://downside154.github.io/posts/node_streams/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-10-20T17:53:54+09:00" />
+<meta property="article:modified_time" content="2023-10-20T17:53:54+09:00" />
+
+<meta itemprop="name" content="Node.Js Streams">
+<meta itemprop="description" content="Intro Node.js has a built-in support for streams. Streams are a fundamental concept in Node.js that enable efficient data handling, esp when dealing with large amounts of information OR working with data in real time.
+Summary:
+Explore the concept of streams in Node.js Understand the different types of streams available (Readable, Writable, Duplex, and Transform) Discuss best practices for working with streams effectively. What are Node.js Streams? Streams enable efficient data handling by reading or writing input/output sequentially."><meta itemprop="datePublished" content="2023-10-20T17:53:54+09:00" />
+<meta itemprop="dateModified" content="2023-10-20T17:53:54+09:00" />
+<meta itemprop="wordCount" content="2273">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Node.Js Streams"/>
+<meta name="twitter:description" content="Intro Node.js has a built-in support for streams. Streams are a fundamental concept in Node.js that enable efficient data handling, esp when dealing with large amounts of information OR working with data in real time.
+Summary:
+Explore the concept of streams in Node.js Understand the different types of streams available (Readable, Writable, Duplex, and Transform) Discuss best practices for working with streams effectively. What are Node.js Streams? Streams enable efficient data handling by reading or writing input/output sequentially."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  <header class="cover bg-top" style="background-image: url('https://downside154.github.io/images/node.png');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        A Random Blog with Posts
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    
+    <a href="https://github.com/downside154" target="_blank" rel="noopener" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">Node.Js Streams</div>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Node.Js Streams</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2023-10-20T17:53:54+09:00">October 20, 2023</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="intro">Intro</h2>
+<p>Node.js has a built-in support for streams.
+Streams are a fundamental concept in Node.js that enable efficient data handling, esp when dealing with large amounts of information OR working with data in real time.</p>
+<p>Summary:</p>
+<ol>
+<li>Explore the concept of streams in Node.js</li>
+<li>Understand the different types of streams available (Readable, Writable, Duplex, and Transform)</li>
+<li>Discuss best practices for working with streams effectively.</li>
+</ol>
+<h3 id="what-are-nodejs-streams">What are Node.js Streams?</h3>
+<p>Streams enable efficient data handling by reading or writing input/output sequentially. They are handy for file operations, network communications, and other forms of end-to-end data exchange.</p>
+<p>Streams process data in small, sequential chunks instead of loading the entire dataset into memory at once. This is useful when working with extensive data, where the file size may exceed the available memory. Streams make it possible to process data in smaller pieces, making it feasible to work with larger files</p>
+<figure><img src="/images/stream_1.png" width="600px"/>
+</figure>
+
+<p>Source : <a href="https://levelup.gitconnected.com/streams-and-how-they-fit-into-node-js-async-nature-a08723055a67">link</a></p>
+<p>As the image above, data is typically read in chunks or as a continuous flow when reading from a stream. Data chunks read from the stream can be stored in buffers. Buffers provide temporary storage space for holding the chunks of data until they can be processed further.</p>
+<p><strong>Example :</strong> Consider the scenario of a live stock market data feed.
+In financial applications, real-time updates of stock prices and market data are crucial for making informed decisions. Instead of fetching and storing the entire data feed in memory (which can be substantial and impractical) streams enable the application to process the data in smaller, continuous chunks. This approach conserves memory and eliminates the need to wait for the entire data feed to be available before taking action.</p>
+<h3 id="why-use-streams">Why use streams?</h3>
+<ol>
+<li>Memory Efficiency</li>
+</ol>
+<p>There is no need to load large amounts of data into memory before processing. Data is processed in smaller, manageable chunks, reducing memory requirements and efficiently utilizing system resources.</p>
+<ol start="2">
+<li>Time efficiency</li>
+</ol>
+<p>Streams enable immediate data processing as it becomes available without waiting for the entire payload to arrive, improving response times and performance.</p>
+<h3 id="types-of-nodejs-streams">Types of Node.js Streams</h3>
+<h4 id="1-readable-streams">1. Readable Streams</h4>
+<p>Allows data to be read from a source, such as a file or network socket. Data is sent sequentially and can be consumed by attaching listeners to the data event. Readable streams can be in a flowing or a paused state, depending on how the data is consumed.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;fs&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Create a Readable stream from a file
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">readStream</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">createReadStream</span>(<span style="color:#e6db74">&#39;the_princess_bride_input.txt&#39;</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Readable stream &#39;data&#39; event handler
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">readStream</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;data&#39;</span>, (<span style="color:#a6e22e">chunk</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Received chunk: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">chunk</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Readable stream &#39;end&#39; event handler
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">readStream</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;end&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Data reading complete.&#39;</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Readable stream &#39;error&#39; event handler
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">readStream</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;error&#39;</span>, (<span style="color:#a6e22e">err</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">`Error occurred: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">err</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>The fs module is used to create a readable stream using <code>createReadStream()</code> method, passing the file path <code>the_princess_bride_input.txt</code> and encoding <code>utf8</code> as arguments. The readable stream reads data from the file in small chunks.</p>
+<p>We attach event handlers to the Readable stream to handle different events. The <code>data</code> event is emitted when a chunk of data is available to be read. The <code>end</code> event is emitted when the readable stream has finished reading all the data from the file. The <code>error</code> event is emitted if an error occurs during the reading process.</p>
+<h4 id="2-writable-streams">2. Writable Streams</h4>
+<p>Writable streams handle the writing of data to a destination, such as a file or network socket. They provide methods like <code>write()</code> and <code>end()</code> to send data to the stream. Writable streams can be used to write large amounts of data in a chunked manner, preventing memory overflow.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;fs&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Create a Writable stream to a file
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">writeStream</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">createWriteStream</span>(<span style="color:#e6db74">&#39;the_princess_bride_output.txt&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Writable stream &#39;finish&#39; event handler
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">writeStream</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;finish&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Data writing complete.&#39;</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Writable stream &#39;error&#39; event handler
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">writeStream</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;error&#39;</span>, (<span style="color:#a6e22e">err</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">`Error occurred: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">err</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Write a quote from &#34;The  to the Writable stream
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">writeStream</span>.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#39;As &#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">writeStream</span>.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#39;You &#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">writeStream</span>.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#39;Wish&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">writeStream</span>.<span style="color:#a6e22e">end</span>();
+</span></span></code></pre></div><p>The fs module is used to create a Writable stream using the <code>createWriteStream()</code> method. We specify the file path <code>the_princess_bride_output.txt</code> where the data will be written.</p>
+<p>The <code>finish</code> event is emitted when the Writable stream has finished writing all the data. The <code>error</code> event is emitted if an error occurs during the writing process. The <code>write()</code> method is used to write individual chunks of data to the Writable stream. In this example, we write the strings &lsquo;As &lsquo;, &lsquo;You &lsquo;, and &lsquo;Wish&rsquo; to the stream. Finally, we call <code>end()</code> to signal the end of data writing.</p>
+<p>By using the Writable stream and listening to the corresponding events, you can efficiently write data to a destination and perform any necessary cleanup or follow-up actions once the writing process is complete.</p>
+<h4 id="3-duplex-streams">3. Duplex Streams</h4>
+<p>Duplex streams  allow data to be both read from and written to a source simultaneously. Duplex streams are bidirectional and offer flexibility in scenarios where reading and writing happen concurrently.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">Duplex</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;stream&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyDuplex</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Duplex</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">constructor</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">super</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">index</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">len</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">_read</span>(<span style="color:#a6e22e">size</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Readable side: push data to the stream
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">lastIndexToRead</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">min</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">index</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">size</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">len</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">index</span>, <span style="color:#a6e22e">lastIndexToRead</span>));
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">index</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">lastIndexToRead</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">size</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// Signal the end of reading
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">push</span>(<span style="color:#66d9ef">null</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">_write</span>(<span style="color:#a6e22e">chunk</span>, <span style="color:#a6e22e">encoding</span>, <span style="color:#a6e22e">next</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">stringVal</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">chunk</span>.<span style="color:#a6e22e">toString</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Writing chunk: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">stringVal</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">stringVal</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">len</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">stringVal</span>.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">next</span>();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">duplexStream</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MyDuplex</span>();
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Readable stream &#39;data&#39; event handler
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">duplexStream</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;data&#34;</span>, (<span style="color:#a6e22e">chunk</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Received data:\n</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">chunk</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Write data to the Duplex stream
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Make sure to use a quote from &#34;The Princess Bride&#34; for better performance :)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">duplexStream</span>.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;Hello.\n&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">duplexStream</span>.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;My name is Inigo Montoya.\n&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">duplexStream</span>.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;You killed my father.\n&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">duplexStream</span>.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;Prepare to die.\n&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Signal writing ended
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">duplexStream</span>.<span style="color:#a6e22e">end</span>();
+</span></span></code></pre></div><p>We extend the Duplex class from the stream module to create a Duplex stream. The Duplex stream represents both a readable and writable stream (which can be independent of each other).</p>
+<p>We define the <code>_read()</code> and <code>_write()</code> methods of the Duplex stream to handle the respective operations. In this case, we are tying the write stream and the read stream together, but this is just for the sake of this example - Duplex stream supports independent read and write streams.</p>
+<p>In the <code>_read()</code> method, we implement the readable side of the Duplex stream. We push data to the stream usingthis.push() , and when the size becomes 0, we signal the end of the reading by pushing null to the stream.</p>
+<p>In the <code>_write()</code> method, we implement the writable side of the Duplex stream. We process the received chunk of data and add it to the internal buffer. The next() method is called to indicate the completion of the write operation.</p>
+<p>Event handlers are attached to the Duplex stream&rsquo;s data event to handle the readable side of the stream. To write data to the Duplex stream, we can use the <code>write()</code> method. Finally, we call <code>end()</code> to signal the end of writing.</p>
+<h4 id="4-transform-streams">4. Transform Streams</h4>
+<p>Transform streams are a special type of duplex stream that modify or transform the data while it passes through the stream. They are commonly used for data manipulation tasks, such as compression, encryption, or parsing. Transform streams receive input, process it, and emit modified output.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">Transform</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;stream&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Create a Transform stream
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">uppercaseTransformStream</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Transform</span>({
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">transform</span>(<span style="color:#a6e22e">chunk</span>, <span style="color:#a6e22e">encoding</span>, <span style="color:#a6e22e">callback</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Transform the received data
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">transformedData</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">chunk</span>.<span style="color:#a6e22e">toString</span>().<span style="color:#a6e22e">toUpperCase</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Push the transformed data to the stream
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">transformedData</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Signal the completion of processing the chunk
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">callback</span>();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Readable stream &#39;data&#39; event handler
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">uppercaseTransformStream</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;data&#39;</span>, (<span style="color:#a6e22e">chunk</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Received transformed data: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">chunk</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Write a classic &#34;Princess Bride&#34; quote to the Transform stream
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">uppercaseTransformStream</span>.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#39;Have fun storming the castle!&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">uppercaseTransformStream</span>.<span style="color:#a6e22e">end</span>();
+</span></span></code></pre></div><p>The Transform class is used from the stream module to create a Transform stream. We define the <code>transform()</code> method within the transform stream options object to handle the transformation operation. In the <code>transform()</code> method, we implement the transformation logic. In this case - we convert the received chunk of data to uppercase using <code>chunk.toString().toUpperCase()</code>. We use <code>this.push()</code> to push the transformed data to the stream. And finally, we call <code>callback()</code> to indicate the completion of processing the chunk.</p>
+<p>We attach an event handler to the Transform stream&rsquo;s data event to handle the readable side of the stream. To write data to the Transform stream, we use the <code>write()</code> method. And we call <code>end()</code> to signal the end of writing.</p>
+<h3 id="using-nodejs-streams">Using Node.js streams</h3>
+<p>To better grasp the practical implementation of Node.js Streams, let&rsquo;s consider an example of reading data from a file and writing it to another file using streams after transforming and compressing.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;fs&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">zlib</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;zlib&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">Readable</span>, <span style="color:#a6e22e">Transform</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;stream&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Readable stream - Read data from a file
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">readableStream</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">createReadStream</span>(<span style="color:#e6db74">&#39;classic_tale_of_true_love_and_high_adventure.txt&#39;</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Transform stream - Modify the data if needed
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">transformStream</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Transform</span>({
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">transform</span>(<span style="color:#a6e22e">chunk</span>, <span style="color:#a6e22e">encoding</span>, <span style="color:#a6e22e">callback</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Perform any necessary transformations
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">modifiedData</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">chunk</span>.<span style="color:#a6e22e">toString</span>().<span style="color:#a6e22e">toUpperCase</span>(); <span style="color:#75715e">// Placeholder for transformation logic
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">modifiedData</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">callback</span>();
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Compress stream - Compress the transformed data
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">compressStream</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">zlib</span>.<span style="color:#a6e22e">createGzip</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Writable stream - Write compressed data to a file
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">writableStream</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">createWriteStream</span>(<span style="color:#e6db74">&#39;compressed-tale.gz&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Pipe streams together
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">readableStream</span>.<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">transformStream</span>).<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">compressStream</span>).<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">writableStream</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Event handlers for completion and error
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">writableStream</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;finish&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Compression complete.&#39;</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">writableStream</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;error&#39;</span>, (<span style="color:#a6e22e">err</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#39;An error occurred during compression:&#39;</span>, <span style="color:#a6e22e">err</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>We read a file using a readable stream, transform the data to uppercase and compress it using two transform streams (one is ours, one is the built-in zlib transform stream), and finally write the data to a file using a writable stream.</p>
+<p>We create a readable stream using <code>fs.createReadStream()</code> to read data from the input file. A transform stream is created using the Transform class. Here, you can implement any necessary transformations on the data (for this example, we used <code>toUpperCase()</code> again). Then we create another transform stream using <code>zlib.createGzip()</code> to compress the transformed data using the Gzip compression algorithm. And finally, a writable stream is created using <code>fs.createWriteStream()</code> to write the compressed data to the compressed-tale.gz file.</p>
+<p>The <code>.pipe()</code> method is used to connect the streams together in a sequential manner. We start with the readable stream and pipe it to the transform stream, which is then piped to the compress stream, and finally, the compress stream is piped to the writable stream. It allows you to establish a streamlined data flow from the readable stream through the transform and compress streams to the writable stream. Lastly, event handlers are attached to the writable stream to handle the finish and error events.</p>
+<p>Using <code>pipe()</code> simplifies the process of connecting streams, automatically handling the data flow, and ensuring efficient and error-free transfer from a readable stream to a writable stream. It takes care of managing the underlying stream events and error propagation.</p>
+<p>On the other hand, using events directly gives developers more fine-grained control over the data flow. By attaching event listeners to the readable stream, you can perform custom operations or transformations on the received data before writing it to the destination.</p>
+<p>When deciding whether to use <code>pipe()</code> or events, the following are some factors you should consider.</p>
+<p><strong>Simplicity:</strong> If you need a straightforward data transfer without any additional processing or transformation, <code>pipe()</code> provides a simple and concise solution.</p>
+<p><strong>Flexibility:</strong> If you require more control over the data flow, such as modifying the data before writing or performing specific actions during the process, using events directly gives you the flexibility to customize the behavior.</p>
+<p><strong>Error handling:</strong> Both <code>pipe()</code> and event listeners allow for error handling. However, when using events, you have more control over how errors are handled and can implement custom error-handling logic.</p>
+<p>It&rsquo;s important to choose the approach that best suits your specific use case. For simple data transfers, <code>pipe()</code> is often the preferred choice due to its simplicity and automatic error handling. However, if you need more control or additional processing during the data flow, using events directly provides the necessary flexibility.</p>
+<h3 id="best-practices">Best practices</h3>
+<p>When working with Node.js Streams, it&rsquo;s important to follow best practices to ensure optimal performance and maintainable code.</p>
+<h4 id="1-error-handling-">1. Error handling :</h4>
+<p>Streams can encounter errors during reading, writing, or transformation. It&rsquo;s important to handle these errors by listening to the error event and taking appropriate action, such as logging the error or gracefully terminating the process.</p>
+<h4 id="2-use-appropriate-high-water-marks-">2. Use appropriate high-water marks :</h4>
+<p>The high-water mark is a buffer size limit that determines when a readable stream should pause or resume its data flow. It&rsquo;s essential to choose an appropriate high-water mark based on the available memory and the nature of the data being processed. This prevents memory overflow or unnecessary pauses in the data flow.</p>
+<h4 id="3-optimize-memory-usage-">3. Optimize memory usage :</h4>
+<p>Since streams process data in chunks, it&rsquo;s important to avoid unnecessary memory consumption. Always release resources when they are no longer needed, such as closing file handles or network connections after the data transfer is complete.</p>
+<h4 id="4-leverage-stream-utilities-">4. Leverage stream utilities :</h4>
+<p>Node.js provides several utility modules, such as stream.pipeline() and stream.finished(), which simplifies stream handling and ensures proper cleanup. These utilities handle error propagation, promise integration, and automatic stream destruction, reducing manual boilerplate code.</p>
+<h4 id="5-implement-flow-control-mechanisms-">5. Implement flow control mechanisms :</h4>
+<p>When a writable stream cannot keep up with the rate of data being read from a readable stream, by the time the readable stream finish reading, there can be a lot of data left in the buffer. In some scenarios, this might even exceed the amount of available memory. This is called backpressure. To handle backpressure effectively, consider implementing flow control mechanisms, such as using the pause() and resume() methods or leveraging third-party modules like pump or through2.</p>
+<hr>
+<p>Acknowledgement
+<a href="https://amplication.com/blog/understanding-nodejs-streams">link</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "downside154" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-dark-gray bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://downside154.github.io/" >
+    &copy;  A Random Blog with Posts 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    
+    <a href="https://github.com/downside154" target="_blank" rel="noopener" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

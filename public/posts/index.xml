@@ -6,111 +6,108 @@
     <description>Recent content in Posts on A Random Blog with Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Oct 2023 16:49:20 +0900</lastBuildDate><atom:link href="https://downside154.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Oct 2023 17:53:54 +0900</lastBuildDate>
+    <atom:link href="https://downside154.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Node.Js Streams</title>
+      <link>https://downside154.github.io/posts/node_streams/</link>
+      <pubDate>Fri, 20 Oct 2023 17:53:54 +0900</pubDate>
+      <guid>https://downside154.github.io/posts/node_streams/</guid>
+      <description>Intro Node.js has a built-in support for streams. Streams are a fundamental concept in Node.js that enable efficient data handling, esp when dealing with large amounts of information OR working with data in real time.
+Summary:
+Explore the concept of streams in Node.js Understand the different types of streams available (Readable, Writable, Duplex, and Transform) Discuss best practices for working with streams effectively. What are Node.js Streams? Streams enable efficient data handling by reading or writing input/output sequentially.</description>
+    </item>
+    <item>
+      <title>Database Indexing Strategies</title>
+      <link>https://downside154.github.io/posts/db_indexing/</link>
+      <pubDate>Fri, 20 Oct 2023 17:46:49 +0900</pubDate>
+      <guid>https://downside154.github.io/posts/db_indexing/</guid>
+      <description>Acknowledgement link 1 link 2</description>
+    </item>
     <item>
       <title>Multi-threading with nodejs</title>
       <link>https://downside154.github.io/posts/multi_thread_nodejs/</link>
       <pubDate>Fri, 20 Oct 2023 16:49:20 +0900</pubDate>
-      
       <guid>https://downside154.github.io/posts/multi_thread_nodejs/</guid>
       <description>Overview What is Multithreading How does Node.js handle asynchronous operations. How to use Node&amp;rsquo;s worker-threads module to create and manage threads. History Computers are becoming more powerful thanks to GPUs and multi-cre CPUs, and modern applications leverage threads(independent execution units in a process) to maximize application performance
 However, JavaScript is a synchronous, blocking, single-threaded language. It was initially created to run on browsers, allowing for much of modern web page interactions, form validations, animations, and so on.</description>
     </item>
-    
     <item>
       <title>Python Enviroment</title>
       <link>https://downside154.github.io/posts/python_enviroment/</link>
       <pubDate>Tue, 03 Oct 2023 23:18:10 +0900</pubDate>
-      
       <guid>https://downside154.github.io/posts/python_enviroment/</guid>
       <description>Anaconda Anaconda(python distributor) anaconda download link
 Anaconda is a distribution of the Python and R programming languages that aims to simplify package management and deployment. It was initially released in July 17, 2021 by Continuum analytics under the Freemium license but other editions are SaaS.
 Google Colaboratory (Colab) Google Colaboratory Colab allows users to write and execute python code on the browser. It is used by students, DS, AI programmers, and many more due to its ease of use.</description>
     </item>
-    
     <item>
       <title>Pandas</title>
       <link>https://downside154.github.io/posts/pandas/</link>
       <pubDate>Mon, 28 Aug 2023 17:54:30 +0900</pubDate>
-      
       <guid>https://downside154.github.io/posts/pandas/</guid>
       <description>Introduction Pandas is an open-source python data analysis library created by Wes McKinney for quantitative finance (hence it&amp;rsquo;s name pandas from &amp;ldquo;PANel DAta System&amp;rdquo;, an econometrics term for data sets that include observations over multiple time periods). It was initially released on January 11th, 2008 and continues to be one of the most popular python tools used when handing data sets nowadays.
 Basic Building Blocks 1 dimensional : Series, TimeSeries</description>
     </item>
-    
     <item>
       <title>SVG(Scalable Vector Graphics)</title>
       <link>https://downside154.github.io/posts/svg/</link>
       <pubDate>Sun, 27 Aug 2023 14:48:47 +0900</pubDate>
-      
       <guid>https://downside154.github.io/posts/svg/</guid>
       <description>Introduction Deep dive into SVG SVG code for an icon is usually made up of a bunch of path elements with d attribute(aka. path data).
 Path Data The d attribute is a series of commands that tell the browser how the path should be drawn. Below is an example of a d attribute cleaned up:
 All path commands follow the same basic syntax - a single letter code followed by a series of numbers.</description>
     </item>
-    
     <item>
       <title>Web Application Server(WAS)</title>
       <link>https://downside154.github.io/posts/was/</link>
       <pubDate>Sat, 12 Aug 2023 20:50:32 +0900</pubDate>
-      
       <guid>https://downside154.github.io/posts/was/</guid>
       <description>HTTP all web browsers communicate through HTTP client -&amp;gt; internet -&amp;gt; server
 Server vs WAS(web application server) Web Server - HTTP, static content(HTML, CSS, JS, IMAGES, VIDEO), etc&amp;hellip;. in simple terms, it&amp;rsquo;s a server that hosts and serves content to the client, used for simple tasks like serving static files, managing client connections, and handling basic request-response. ex: NGINX, APACHE WAS - Web Server + dynamic content, runs application logic code to provide dynamic HTML, API (JSON), SERVLET, JSP, SPRING MVC WAS provides an environment where developers can build, deploy, and run applications that process and generate dynamic content.</description>
     </item>
-    
     <item>
       <title>IaC</title>
       <link>https://downside154.github.io/posts/ioc/</link>
       <pubDate>Wed, 19 Jul 2023 12:32:52 +0900</pubDate>
-      
       <guid>https://downside154.github.io/posts/ioc/</guid>
       <description>Summary Infrastructure as code (IaC) is an approach to managing and provisioning infrastructure resources through software and automated processes, rather than manual processes. It involves using machine-readable configuration files or scripts to define and control the infrastructure, treating it as code. With IaC, infrastructure resources such as networks, compute services, databases, and storage can be defined, managed, and deployed in a standardized, versioned, and parameterized manner.
 Imperative vs Declarative IaC IaC allows you to define your infrastructure resources in a descriptive model, specifying the desired outcome rather than the specific steps to achieve it.</description>
     </item>
-    
     <item>
       <title>Apache Tomcat</title>
       <link>https://downside154.github.io/posts/apache_tomcat/</link>
       <pubDate>Tue, 04 Jul 2023 15:57:49 +0900</pubDate>
-      
       <guid>https://downside154.github.io/posts/apache_tomcat/</guid>
       <description>What is Apache Tomcat? In web development, Apache Tomcat is an open-source web server and servlet container. It is designed to execute Java servlets and render JavaServer Pages(JSPs) to serve dynamic web content.
 Tomcat is widely used as a web application server for hosting Java-based web applications. It provides a Java Servlet API implementation and supports the Java Enterprise Edition (Java EE) specifications. Developers can write servlets and JSPs, which are Java-based components, and deploy them on Tomcat for execution.</description>
     </item>
-    
     <item>
       <title>MacOS Command Line Tools</title>
       <link>https://downside154.github.io/posts/macos_cltools/</link>
       <pubDate>Wed, 28 Jun 2023 00:15:38 +0900</pubDate>
-      
       <guid>https://downside154.github.io/posts/macos_cltools/</guid>
       <description>This post will have some command line tools used in macOS. Truth be told, I do not use ALL of these commands all of the time but I consider them useful nonetheless.
 caffeinate (sleep) caffeinate to prevent your mac from going to sleep as long as the command is running. caffeinate -u -t &amp;lt;seconds&amp;gt; to specify the time. Adding the -d flag prevents the display from going to sleep. caffeinate &amp;lt;command&amp;gt; will start the command in a new process and will prevent sleep until that process exits.</description>
     </item>
-    
     <item>
       <title>OOP</title>
       <link>https://downside154.github.io/posts/oop/</link>
       <pubDate>Mon, 19 Jun 2023 09:38:57 +0900</pubDate>
-      
       <guid>https://downside154.github.io/posts/oop/</guid>
       <description>OOP (object oriented programming) is a programming paradigm based on the concept of objects. Data is in the form of fields(aka. attributes or properties) and the code is in the form of procedures (aka methods).
 OOP Concepts Random fact of the day: The acronym OOP can refer to a lot of things, even as a jargon for software developers.
 Object Oriented Positioning Object Oriented Programming Out of Position Ordinary Object Pointer (JDK) </description>
     </item>
-    
     <item>
       <title>First Post</title>
       <link>https://downside154.github.io/posts/first_post/</link>
       <pubDate>Fri, 17 Feb 2023 16:18:35 +0900</pubDate>
-      
       <guid>https://downside154.github.io/posts/first_post/</guid>
       <description>Introduction : Test Post As the first post of this blog. It seems only fitting that this be the place where I test out the features of Hugo.
 Testing This is bold text, and this is emphasized text.
 Table
 test1 test2 test3 test4 test5 6 7 8 9 10 11 12 13 14 15 checking if extended markdown works. ==yea== it~does~ work^2^ :joy: highlight, subscript, superscript, emoji markdown not working Trie code in python</description>
     </item>
-    
   </channel>
 </rss>

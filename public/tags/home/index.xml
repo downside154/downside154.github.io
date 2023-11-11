@@ -6,15 +6,14 @@
     <description>Recent content in home on A Random Blog with Posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Jun 2023 09:55:43 +0900</lastBuildDate><atom:link href="https://downside154.github.io/tags/home/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jun 2023 09:55:43 +0900</lastBuildDate>
+    <atom:link href="https://downside154.github.io/tags/home/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>downside154&#39;s 기술 블로그</title>
       <link>https://downside154.github.io/</link>
       <pubDate>Mon, 19 Jun 2023 09:55:43 +0900</pubDate>
-      
       <guid>https://downside154.github.io/</guid>
       <description>downside154&amp;rsquo;s 기술 블로그 성장형 개발자 downside154의 간단한 이야기입니다.</description>
     </item>
-    
   </channel>
 </rss>
