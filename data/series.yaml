@@ -1,0 +1,10 @@
+# Series metadata for the Roster sidebar + article series widget.
+# Key = the series id used in each post's `series:` front matter.
+nodejs:
+  title: "Node.js, in depth"
+  blurb: "Working through Node's runtime — streams, concurrency, and the event loop."
+  color: "#307BA6"   # Aqua Blue
+python:
+  title: "The Python toolchain"
+  blurb: "Setting up and getting real work done with the Python data stack."
+  color: "#5F4B8B"   # Ultra Violet

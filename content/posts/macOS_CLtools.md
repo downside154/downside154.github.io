@@ -1,7 +1,9 @@
 ---
 title: "MacOS Command Line Tools"
 date: 2023-06-28T00:15:38+09:00
-tags: ["CLI", "macOS", "terminal"]
+tags: ["macOS", "terminal"]
+categories: ["Culture"]
+description: "A handful of macOS command-line tools I keep coming back to."
 featured_image: "/images/terminal.jpg"
 draft: false
 ---

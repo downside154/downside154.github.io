@@ -1,0 +1,31 @@
+{{- /* Sticky nav. Active state computed from the current page. */ -}}
+{{- $active := "" -}}
+{{- if .IsHome }}{{ $active = "Latest" }}{{ end -}}
+{{- if eq .Type "about" }}{{ $active = "About" }}{{ end -}}
+{{- if and (eq .Kind "term") (eq .Data.Singular "category") }}{{ $active = .Title }}{{ end -}}
+{{- $links := slice
+    (dict "label" "Latest" "url" (relURL "/"))
+    (dict "label" "Engineering" "url" (relURL "/categories/engineering/"))
+    (dict "label" "Culture" "url" (relURL "/categories/culture/"))
+    (dict "label" "About" "url" (relURL "/about/")) -}}
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="{{ relURL "/" }}">
+      <span class="nav__wordmark">{{ site.Params.wordmark }}</span>
+      <span class="nav__tagline">{{ site.Params.tagline }}</span>
+    </a>
+    <nav class="nav__links">
+      {{ range $links }}<a class="nav__link{{ if eq .label $active }} is-active{{ end }}" href="{{ .url }}">{{ .label }}</a>{{ end }}
+    </nav>
+    <div class="nav__right">
+      <button class="nav__search" data-search-open title="Search (⌘K)" aria-label="Search">
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="5.5" cy="5.5" r="4"/><path d="M9 9l3 3" stroke-linecap="round"/></svg>
+        <span class="kbd">⌘K</span>
+      </button>
+      <button class="nav__menu-btn" data-menu-toggle aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav__mobile" data-menu>
+    {{ range $links }}<a class="{{ if eq .label $active }}is-active{{ end }}" href="{{ .url }}">{{ .label }}</a>{{ end }}
+  </div>
+</header>

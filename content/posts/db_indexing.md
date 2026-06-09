@@ -3,6 +3,8 @@ title: "Database Indexing Strategies"
 date: 2023-10-20T17:46:49+09:00
 draft: false
 tags: ["database"]
+categories: ["Engineering"]
+description: "Why the right index turns a slow query fast — indexing strategies and their trade-offs."
 featured_image: "/images/db_index.jpeg"
 
 ---

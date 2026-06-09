@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>markdown on A Random Blog with Posts</title>
-    <link>https://downside154.github.io/tags/markdown/</link>
-    <description>Recent content in markdown on A Random Blog with Posts</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 17 Feb 2023 16:18:35 +0900</lastBuildDate>
-    <atom:link href="https://downside154.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>First Post</title>
-      <link>https://downside154.github.io/posts/first_post/</link>
-      <pubDate>Fri, 17 Feb 2023 16:18:35 +0900</pubDate>
-      <guid>https://downside154.github.io/posts/first_post/</guid>
-      <description>Introduction : Test Post As the first post of this blog. It seems only fitting that this be the place where I test out the features of Hugo.
-Testing This is bold text, and this is emphasized text.
-Table
-test1 test2 test3 test4 test5 6 7 8 9 10 11 12 13 14 15 checking if extended markdown works. ==yea== it~does~ work^2^ :joy: highlight, subscript, superscript, emoji markdown not working Trie code in python</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Markdown on downside154</title>
+		<link>http://localhost:1313/tags/markdown/</link>
+		<description>Recent content in Markdown on downside154</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 17 Feb 2023 16:18:35 +0900</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>First Post</title>
+				<link>http://localhost:1313/posts/first_post/</link>
+				<pubDate>Fri, 17 Feb 2023 16:18:35 +0900</pubDate>
+				<guid>http://localhost:1313/posts/first_post/</guid>
+				<description>&lt;h2 id=&#34;introduction--test-post&#34;&gt;Introduction : Test Post&lt;/h2&gt;&#xA;&lt;p&gt;As the first post of this blog. It seems only fitting that this be the place where I test out the features of Hugo.&lt;/p&gt;&#xA;&lt;h3 id=&#34;testing&#34;&gt;Testing&lt;/h3&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;&#xA;&lt;p&gt;Table&lt;/p&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;test1&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;test2&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;test3&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;test4&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;test5&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;6&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;7&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;8&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;9&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;10&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;11&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;12&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;13&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;14&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;15&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;hr&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; checking if extended markdown &lt;del&gt;works&lt;/del&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; ==yea== it&lt;del&gt;does&lt;/del&gt; work^2^ :joy:&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; highlight, subscript, superscript, emoji markdown not working&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Trie code in python&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

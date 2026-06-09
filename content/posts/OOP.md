@@ -2,7 +2,9 @@
 title: "OOP"
 date: 2023-06-19T09:38:57+09:00
 draft: false
-tags: ["programming"]
+tags: []
+categories: ["Engineering"]
+description: "Objects, attributes, and methods — the core ideas behind object-oriented programming."
 featured_image: "/images/oop.jpeg"
 
 ---

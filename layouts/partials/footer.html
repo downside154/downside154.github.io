@@ -1,0 +1,10 @@
+{{- /* Slim footer: wordmark + tagline + copyright (Streams/More/Follow removed per design). */ -}}
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div class="footer__wordmark">{{ site.Params.wordmark }}</div>
+      <div class="footer__blurb">An open engineering journal. New notes most weeks.</div>
+    </div>
+    <div class="footer__copy">© {{ now.Format "2006" }} {{ site.Params.wordmark }} · a personal engineering journal</div>
+  </div>
+</footer>

@@ -2,7 +2,10 @@
 title: "Python Enviroment"
 date: 2023-10-03T23:18:10+09:00
 draft: false
-tags: ["python", "anaconda", "colab", "jupyter", "pandas"]
+tags: ["python", "anaconda", "jupyter", "pandas"]
+categories: ["Culture"]
+series: ["python"]
+description: "Anaconda, Jupyter, Colab, and venvs — making sense of the Python environment maze."
 featured_image: "/images/python.png"
 ---
 

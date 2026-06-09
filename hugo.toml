@@ -1,22 +1,45 @@
-title = "A Random Blog with Posts"
 baseURL = "https://downside154.github.io/"
-languageCode = "en-us"
-theme = "ananke"
-
-SectionPagesMenu = "main"
-Paginate = 10
-googleAnalytics = ""
+locale = "en-us"
+title = "downside154"
 enableRobotsTXT = true
 
-# comments
-disqusShortname = "downside154"
+# Roster design — single-author engineering journal.
+# Theme intentionally unset: custom layouts live in /layouts and override any theme.
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]   # JSON = client-side ⌘K search index
 
 [params]
-    description = ""
-  # choose a background color from any on this page: https://tachyons.io/docs/themes/skins/ and preface it with "bg-"
-    background_color_class = "bg-dark-gray"
-    recent_posts_number = 100
+  wordmark = "downside154"
+  tagline = "// engineering, in the open"
+  heroTitle = "I document the things I build, break, and figure out."
+  heroSub = "A working engineering journal — notes for developers and a paper trail for the curious."
+  accent = "#005240"        # Forest Teal (themeable via --acc)
+  accentSoft = "#DCE8E3"
+  readFont = "serif"        # serif | sans  (article reading typeface)
+  github = "https://github.com/downside154"
+  linkedin = "https://www.linkedin.com/in/dojun-kim-756a9215b"
 
-[[params.ananke_socials]]
-name = "github"
-url = "https://github.com/downside154"
+  # Single author = the site owner. Shown on the About card + About page.
+  [params.author]
+    name = "downside154"
+    initials = "DS"
+    role = "Software engineer · backend & systems"
+    bio = "I build things and write up the parts that surprised me. This journal is where I think out loud — for other developers and the curious."
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true            # posts contain inline HTML / shortcodes
+  [markup.highlight]
+    noClasses = false        # emit Chroma classes so the dark code theme can be styled in CSS
+    codeFences = true
+    guessSyntax = true
+    tabWidth = 2
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3

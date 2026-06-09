@@ -1,0 +1,74 @@
+{{ define "main" }}
+{{ if eq .Kind "taxonomy" }}
+  {{/* Index of all terms in a taxonomy (e.g. /tags/, /categories/, /series/). */}}
+  <div class="wrap">
+    <div class="list-head">
+      <h1 class="list-head__title">{{ .Title }}</h1>
+      <p class="list-head__sub">Browse by {{ .Data.Singular }}.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="two-col" style="padding:12px 0 48px;">
+      <div class="tag-cloud" style="align-content:flex-start;">
+        {{ range .Pages }}<a class="tag" href="{{ .RelPermalink }}">{{ .Title }} <span style="opacity:.55">{{ len .Pages }}</span></a>{{ end }}
+      </div>
+      {{ partial "sidebar.html" . }}
+    </div>
+  </div>
+{{ else }}
+  {{- $sing := "" -}}{{- if eq .Kind "term" }}{{ $sing = .Data.Singular }}{{ end -}}
+  {{- $title := .Title -}}
+  {{- $sub := "" -}}
+  {{- $showFilter := false -}}
+  {{- $isSeries := false -}}
+  {{- $pages := .Pages -}}
+  {{- if eq $sing "category" -}}
+    {{- $showFilter = true -}}
+    {{- if eq .Title "Engineering" }}{{ $sub = "Build logs, postmortems, and systems notes" }}
+    {{- else if eq .Title "Culture" }}{{ $sub = "Tools, workflow, and the human side of the job" }}
+    {{- else }}{{ $sub = printf "%d %s" (len .Pages) (cond (eq (len .Pages) 1) "post" "posts") }}{{ end -}}
+  {{- else if eq $sing "tag" -}}
+    {{- $showFilter = true -}}
+    {{- $title = printf "#%s" .Title -}}
+    {{- $n := len .Pages -}}{{- $sub = printf "%d %s tagged %s" $n (cond (eq $n 1) "post" "posts") .Title -}}
+  {{- else if eq $sing "series" -}}
+    {{- $isSeries = true -}}
+    {{- $pages = sort .Pages "Date" "asc" -}}
+    {{- with index hugo.Data.series .Title }}{{ $title = .title }}{{ $sub = .blurb }}{{ end -}}
+  {{- else -}}
+    {{- $showFilter = true -}}
+    {{- if eq .Title "Posts" }}{{ $title = "Writing" }}{{ end -}}
+    {{- $sub = "Everything I've written, newest first." -}}
+  {{- end -}}
+
+  {{- $tagset := slice -}}
+  {{- range $pages }}{{ range .Params.tags }}{{ $tagset = $tagset | append (lower .) }}{{ end }}{{ end -}}
+  {{- $tagset = $tagset | uniq | sort | first 8 -}}
+
+  <div class="wrap">
+    <div class="list-head">
+      <h1 class="list-head__title">{{ $title }}</h1>
+      {{ with $sub }}<p class="list-head__sub">{{ . }}</p>{{ end }}
+      {{ if $showFilter }}
+      <div class="filter-bar" data-filter>
+        <div class="filter-bar__chips">
+          <button class="filter-chip is-active" data-tag="__all">All</button>
+          {{ range $tagset }}<button class="filter-chip" data-tag="{{ . }}">#{{ . }}</button>{{ end }}
+        </div>
+        <button class="filter-bar__sort" data-sort="new">sort: newest ▾</button>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="two-col" style="padding:12px 0 48px;">
+      <div class="feed" data-feed{{ if $isSeries }} data-series{{ end }}>
+        {{ if eq (len $pages) 0 }}<div class="list-empty">No posts here yet.</div>{{ end }}
+        {{ range $pages }}{{ partial "post-row.html" . }}{{ end }}
+      </div>
+      {{ partial "sidebar.html" . }}
+    </div>
+  </div>
+{{ end }}
+{{ end }}

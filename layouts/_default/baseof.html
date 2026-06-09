@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="{{ site.Language.Lang | default "en" }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  {{ partial "nav.html" . }}
+  <main class="site-main">
+    <div class="fade-region">
+      {{ block "main" . }}{{ end }}
+    </div>
+  </main>
+  {{ partial "footer.html" . }}
+  {{ partial "search-overlay.html" . }}
+  {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
+  <script src="{{ $js.RelPermalink }}"{{ if $js.Data.Integrity }} integrity="{{ $js.Data.Integrity }}"{{ end }} defer></script>
+</body>
+</html>

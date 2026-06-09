@@ -1,0 +1,16 @@
+{{- $title := "" -}}
+{{- if .IsHome }}{{ $title = printf "%s — engineering, in the open" site.Title }}{{ else }}{{ $title = printf "%s · %s" .Title site.Title }}{{ end -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ $title }}</title>
+{{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+{{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}"{{ if $css.Data.Integrity }} integrity="{{ $css.Data.Integrity }}"{{ end }}>
+<style>:root{--acc:{{ site.Params.accent }};--acc-soft:{{ site.Params.accentSoft }};--read-font:{{ if eq site.Params.readFont "sans" }}"Manrope", system-ui, sans-serif{{ else }}"Lora", Georgia, serif{{ end }};}</style>
+{{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ .RelPermalink }}">{{ end }}
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23005240'/><text x='50' y='68' font-family='sans-serif' font-size='54' font-weight='800' fill='%23F0EEE9' text-anchor='middle'>d</text></svg>">

@@ -2,120 +2,118 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://downside154.github.io/posts/node_streams/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2023-10-20T17:53:54+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/posts/</loc>
+    <loc>http://localhost:1313/categories/engineering/</loc>
     <lastmod>2023-10-20T17:53:54+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/tags/database/</loc>
+    <loc>http://localhost:1313/tags/node/</loc>
+    <lastmod>2023-10-20T17:53:54+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/node_streams/</loc>
+    <lastmod>2023-10-20T17:53:54+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/series/nodejs/</loc>
+    <lastmod>2023-10-20T17:53:54+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2023-10-20T17:53:54+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/series/</loc>
+    <lastmod>2023-10-20T17:53:54+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2023-10-20T17:53:54+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/database/</loc>
     <lastmod>2023-10-20T17:46:49+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/posts/db_indexing/</loc>
+    <loc>http://localhost:1313/posts/db_indexing/</loc>
     <lastmod>2023-10-20T17:46:49+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/tags/</loc>
-    <lastmod>2023-10-20T17:46:49+09:00</lastmod>
-  </url><url>
-    <loc>https://downside154.github.io/posts/multi_thread_nodejs/</loc>
+    <loc>http://localhost:1313/posts/multi_thread_nodejs/</loc>
     <lastmod>2023-10-20T16:49:20+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/tags/node/</loc>
-    <lastmod>2023-10-20T16:49:20+09:00</lastmod>
-  </url><url>
-    <loc>https://downside154.github.io/tags/anaconda/</loc>
+    <loc>http://localhost:1313/tags/anaconda/</loc>
     <lastmod>2023-10-03T23:18:10+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/tags/colab/</loc>
+    <loc>http://localhost:1313/categories/culture/</loc>
     <lastmod>2023-10-03T23:18:10+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/tags/jupyter/</loc>
+    <loc>http://localhost:1313/tags/jupyter/</loc>
     <lastmod>2023-10-03T23:18:10+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/tags/pandas/</loc>
+    <loc>http://localhost:1313/tags/pandas/</loc>
     <lastmod>2023-10-03T23:18:10+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/tags/python/</loc>
+    <loc>http://localhost:1313/series/python/</loc>
     <lastmod>2023-10-03T23:18:10+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/posts/python_enviroment/</loc>
+    <loc>http://localhost:1313/tags/python/</loc>
     <lastmod>2023-10-03T23:18:10+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/posts/pandas/</loc>
+    <loc>http://localhost:1313/posts/python_enviroment/</loc>
+    <lastmod>2023-10-03T23:18:10+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/pandas/</loc>
     <lastmod>2023-08-28T17:54:30+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/tags/fe/</loc>
+    <loc>http://localhost:1313/tags/fe/</loc>
     <lastmod>2023-08-27T14:48:47+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/posts/svg/</loc>
+    <loc>http://localhost:1313/posts/svg/</loc>
     <lastmod>2023-08-27T14:48:47+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/tags/server/</loc>
+    <loc>http://localhost:1313/tags/server/</loc>
     <lastmod>2023-08-12T20:50:32+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/posts/was/</loc>
+    <loc>http://localhost:1313/posts/was/</loc>
     <lastmod>2023-08-12T20:50:32+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/tags/iac/</loc>
+    <loc>http://localhost:1313/posts/ioc/</loc>
     <lastmod>2023-07-19T12:32:52+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/posts/ioc/</loc>
+    <loc>http://localhost:1313/tags/iac/</loc>
     <lastmod>2023-07-19T12:32:52+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/tags/programming/</loc>
-    <lastmod>2023-07-19T12:32:52+09:00</lastmod>
-  </url><url>
-    <loc>https://downside154.github.io/tags/apache/</loc>
+    <loc>http://localhost:1313/tags/apache/</loc>
     <lastmod>2023-07-04T15:57:49+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/posts/apache_tomcat/</loc>
+    <loc>http://localhost:1313/posts/apache_tomcat/</loc>
     <lastmod>2023-07-04T15:57:49+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/tags/java/</loc>
+    <loc>http://localhost:1313/tags/java/</loc>
     <lastmod>2023-07-04T15:57:49+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/tags/spring/</loc>
+    <loc>http://localhost:1313/tags/spring/</loc>
     <lastmod>2023-07-04T15:57:49+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/tags/tomcat/</loc>
+    <loc>http://localhost:1313/tags/tomcat/</loc>
     <lastmod>2023-07-04T15:57:49+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/tags/cli/</loc>
+    <loc>http://localhost:1313/tags/macos/</loc>
     <lastmod>2023-06-28T00:15:38+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/tags/macos/</loc>
+    <loc>http://localhost:1313/posts/macos_cltools/</loc>
     <lastmod>2023-06-28T00:15:38+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/posts/macos_cltools/</loc>
+    <loc>http://localhost:1313/tags/terminal/</loc>
     <lastmod>2023-06-28T00:15:38+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/tags/terminal/</loc>
-    <lastmod>2023-06-28T00:15:38+09:00</lastmod>
-  </url><url>
-    <loc>https://downside154.github.io/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2023-06-19T12:30:08+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2023-06-19T09:55:43+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/tags/home/</loc>
-    <lastmod>2023-06-19T09:55:43+09:00</lastmod>
-  </url><url>
-    <loc>https://downside154.github.io/posts/oop/</loc>
+    <loc>http://localhost:1313/posts/oop/</loc>
     <lastmod>2023-06-19T09:38:57+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/posts/first_post/</loc>
+    <loc>http://localhost:1313/posts/first_post/</loc>
     <lastmod>2023-02-17T16:18:35+09:00</lastmod>
   </url><url>
-    <loc>https://downside154.github.io/tags/hugo/</loc>
+    <loc>http://localhost:1313/tags/markdown/</loc>
     <lastmod>2023-02-17T16:18:35+09:00</lastmod>
-  </url><url>
-    <loc>https://downside154.github.io/tags/intro/</loc>
-    <lastmod>2023-02-17T16:18:35+09:00</lastmod>
-  </url><url>
-    <loc>https://downside154.github.io/tags/markdown/</loc>
-    <lastmod>2023-02-17T16:18:35+09:00</lastmod>
-  </url><url>
-    <loc>https://downside154.github.io/categories/</loc>
   </url>
 </urlset>

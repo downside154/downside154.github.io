@@ -1,7 +1,9 @@
 ---
 title: "First Post"
 date: 2023-02-17T16:18:35+09:00
-tags: ["intro", "markdown", "hugo"]
+tags: ["markdown"]
+categories: ["Culture"]
+description: "Testing the waters — the first post, and a quick tour of what Hugo can do."
 featured_image: "/images/gif_test.gif"
 omit_header_text: true
 ---

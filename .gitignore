@@ -147,6 +147,9 @@ coverage/
 .coverage
 htmlcov/
 
+# Playwrigt
+.playwright*
+
 # macOS Specific
 .AppleDouble
 .LSOverride

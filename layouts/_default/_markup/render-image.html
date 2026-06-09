@@ -1,0 +1,5 @@
+{{- /* Markdown images → bordered figure with optional caption. */ -}}
+<figure>
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy"{{ with .Title }} title="{{ . }}"{{ end }}>
+  {{ with .Title }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

@@ -1,0 +1,27 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero__inner">
+    <h1 class="hero__title">{{ site.Params.heroTitle }}</h1>
+    <p class="hero__sub">{{ site.Params.heroSub }}</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="two-col" style="padding:36px 0 52px;">
+    <div>
+      <div class="tabs" data-tabs>
+        <button class="tabs__tab is-active" data-tab="Latest">Latest</button>
+        <button class="tabs__tab" data-tab="Engineering">Engineering</button>
+        <button class="tabs__tab" data-tab="Culture">Culture</button>
+      </div>
+      <div class="feed" data-feed data-shown="5">
+        {{ range where site.RegularPages "Section" "posts" }}
+          {{ partial "post-row.html" . }}
+        {{ end }}
+      </div>
+      <div class="load-more-wrap"><button class="load-more" data-load-more>Load more entries</button></div>
+    </div>
+    {{ partial "sidebar.html" . }}
+  </div>
+</div>
+{{ end }}

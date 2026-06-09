@@ -2,7 +2,10 @@
 title: "Node.Js Streams"
 date: 2023-10-20T17:53:54+09:00
 draft: false
-tag: ["node"]
+tags: ["node"]
+categories: ["Engineering"]
+series: ["nodejs"]
+description: "How Node.js streams handle large data efficiently — the four stream types and when to reach for each."
 featured_image: "/images/node.png"
 ---
 

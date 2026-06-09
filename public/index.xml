@@ -1,113 +1,101 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>downside154&#39;s 기술 블로그 on A Random Blog with Posts</title>
-    <link>https://downside154.github.io/</link>
-    <description>Recent content in downside154&#39;s 기술 블로그 on A Random Blog with Posts</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 19 Jun 2023 09:55:43 +0900</lastBuildDate>
-    <atom:link href="https://downside154.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Node.Js Streams</title>
-      <link>https://downside154.github.io/posts/node_streams/</link>
-      <pubDate>Fri, 20 Oct 2023 17:53:54 +0900</pubDate>
-      <guid>https://downside154.github.io/posts/node_streams/</guid>
-      <description>Intro Node.js has a built-in support for streams. Streams are a fundamental concept in Node.js that enable efficient data handling, esp when dealing with large amounts of information OR working with data in real time.
-Summary:
-Explore the concept of streams in Node.js Understand the different types of streams available (Readable, Writable, Duplex, and Transform) Discuss best practices for working with streams effectively. What are Node.js Streams? Streams enable efficient data handling by reading or writing input/output sequentially.</description>
-    </item>
-    <item>
-      <title>Database Indexing Strategies</title>
-      <link>https://downside154.github.io/posts/db_indexing/</link>
-      <pubDate>Fri, 20 Oct 2023 17:46:49 +0900</pubDate>
-      <guid>https://downside154.github.io/posts/db_indexing/</guid>
-      <description>Acknowledgement link 1 link 2</description>
-    </item>
-    <item>
-      <title>Multi-threading with nodejs</title>
-      <link>https://downside154.github.io/posts/multi_thread_nodejs/</link>
-      <pubDate>Fri, 20 Oct 2023 16:49:20 +0900</pubDate>
-      <guid>https://downside154.github.io/posts/multi_thread_nodejs/</guid>
-      <description>Overview What is Multithreading How does Node.js handle asynchronous operations. How to use Node&amp;rsquo;s worker-threads module to create and manage threads. History Computers are becoming more powerful thanks to GPUs and multi-cre CPUs, and modern applications leverage threads(independent execution units in a process) to maximize application performance
-However, JavaScript is a synchronous, blocking, single-threaded language. It was initially created to run on browsers, allowing for much of modern web page interactions, form validations, animations, and so on.</description>
-    </item>
-    <item>
-      <title>Python Enviroment</title>
-      <link>https://downside154.github.io/posts/python_enviroment/</link>
-      <pubDate>Tue, 03 Oct 2023 23:18:10 +0900</pubDate>
-      <guid>https://downside154.github.io/posts/python_enviroment/</guid>
-      <description>Anaconda Anaconda(python distributor) anaconda download link
-Anaconda is a distribution of the Python and R programming languages that aims to simplify package management and deployment. It was initially released in July 17, 2021 by Continuum analytics under the Freemium license but other editions are SaaS.
-Google Colaboratory (Colab) Google Colaboratory Colab allows users to write and execute python code on the browser. It is used by students, DS, AI programmers, and many more due to its ease of use.</description>
-    </item>
-    <item>
-      <title>Pandas</title>
-      <link>https://downside154.github.io/posts/pandas/</link>
-      <pubDate>Mon, 28 Aug 2023 17:54:30 +0900</pubDate>
-      <guid>https://downside154.github.io/posts/pandas/</guid>
-      <description>Introduction Pandas is an open-source python data analysis library created by Wes McKinney for quantitative finance (hence it&amp;rsquo;s name pandas from &amp;ldquo;PANel DAta System&amp;rdquo;, an econometrics term for data sets that include observations over multiple time periods). It was initially released on January 11th, 2008 and continues to be one of the most popular python tools used when handing data sets nowadays.
-Basic Building Blocks 1 dimensional : Series, TimeSeries</description>
-    </item>
-    <item>
-      <title>SVG(Scalable Vector Graphics)</title>
-      <link>https://downside154.github.io/posts/svg/</link>
-      <pubDate>Sun, 27 Aug 2023 14:48:47 +0900</pubDate>
-      <guid>https://downside154.github.io/posts/svg/</guid>
-      <description>Introduction Deep dive into SVG SVG code for an icon is usually made up of a bunch of path elements with d attribute(aka. path data).
-Path Data The d attribute is a series of commands that tell the browser how the path should be drawn. Below is an example of a d attribute cleaned up:
-All path commands follow the same basic syntax - a single letter code followed by a series of numbers.</description>
-    </item>
-    <item>
-      <title>Web Application Server(WAS)</title>
-      <link>https://downside154.github.io/posts/was/</link>
-      <pubDate>Sat, 12 Aug 2023 20:50:32 +0900</pubDate>
-      <guid>https://downside154.github.io/posts/was/</guid>
-      <description>HTTP all web browsers communicate through HTTP client -&amp;gt; internet -&amp;gt; server
-Server vs WAS(web application server) Web Server - HTTP, static content(HTML, CSS, JS, IMAGES, VIDEO), etc&amp;hellip;. in simple terms, it&amp;rsquo;s a server that hosts and serves content to the client, used for simple tasks like serving static files, managing client connections, and handling basic request-response. ex: NGINX, APACHE WAS - Web Server + dynamic content, runs application logic code to provide dynamic HTML, API (JSON), SERVLET, JSP, SPRING MVC WAS provides an environment where developers can build, deploy, and run applications that process and generate dynamic content.</description>
-    </item>
-    <item>
-      <title>IaC</title>
-      <link>https://downside154.github.io/posts/ioc/</link>
-      <pubDate>Wed, 19 Jul 2023 12:32:52 +0900</pubDate>
-      <guid>https://downside154.github.io/posts/ioc/</guid>
-      <description>Summary Infrastructure as code (IaC) is an approach to managing and provisioning infrastructure resources through software and automated processes, rather than manual processes. It involves using machine-readable configuration files or scripts to define and control the infrastructure, treating it as code. With IaC, infrastructure resources such as networks, compute services, databases, and storage can be defined, managed, and deployed in a standardized, versioned, and parameterized manner.
-Imperative vs Declarative IaC IaC allows you to define your infrastructure resources in a descriptive model, specifying the desired outcome rather than the specific steps to achieve it.</description>
-    </item>
-    <item>
-      <title>Apache Tomcat</title>
-      <link>https://downside154.github.io/posts/apache_tomcat/</link>
-      <pubDate>Tue, 04 Jul 2023 15:57:49 +0900</pubDate>
-      <guid>https://downside154.github.io/posts/apache_tomcat/</guid>
-      <description>What is Apache Tomcat? In web development, Apache Tomcat is an open-source web server and servlet container. It is designed to execute Java servlets and render JavaServer Pages(JSPs) to serve dynamic web content.
-Tomcat is widely used as a web application server for hosting Java-based web applications. It provides a Java Servlet API implementation and supports the Java Enterprise Edition (Java EE) specifications. Developers can write servlets and JSPs, which are Java-based components, and deploy them on Tomcat for execution.</description>
-    </item>
-    <item>
-      <title>MacOS Command Line Tools</title>
-      <link>https://downside154.github.io/posts/macos_cltools/</link>
-      <pubDate>Wed, 28 Jun 2023 00:15:38 +0900</pubDate>
-      <guid>https://downside154.github.io/posts/macos_cltools/</guid>
-      <description>This post will have some command line tools used in macOS. Truth be told, I do not use ALL of these commands all of the time but I consider them useful nonetheless.
-caffeinate (sleep) caffeinate to prevent your mac from going to sleep as long as the command is running. caffeinate -u -t &amp;lt;seconds&amp;gt; to specify the time. Adding the -d flag prevents the display from going to sleep. caffeinate &amp;lt;command&amp;gt; will start the command in a new process and will prevent sleep until that process exits.</description>
-    </item>
-    <item>
-      <title>OOP</title>
-      <link>https://downside154.github.io/posts/oop/</link>
-      <pubDate>Mon, 19 Jun 2023 09:38:57 +0900</pubDate>
-      <guid>https://downside154.github.io/posts/oop/</guid>
-      <description>OOP (object oriented programming) is a programming paradigm based on the concept of objects. Data is in the form of fields(aka. attributes or properties) and the code is in the form of procedures (aka methods).
-OOP Concepts Random fact of the day: The acronym OOP can refer to a lot of things, even as a jargon for software developers.
-Object Oriented Positioning Object Oriented Programming Out of Position Ordinary Object Pointer (JDK) </description>
-    </item>
-    <item>
-      <title>First Post</title>
-      <link>https://downside154.github.io/posts/first_post/</link>
-      <pubDate>Fri, 17 Feb 2023 16:18:35 +0900</pubDate>
-      <guid>https://downside154.github.io/posts/first_post/</guid>
-      <description>Introduction : Test Post As the first post of this blog. It seems only fitting that this be the place where I test out the features of Hugo.
-Testing This is bold text, and this is emphasized text.
-Table
-test1 test2 test3 test4 test5 6 7 8 9 10 11 12 13 14 15 checking if extended markdown works. ==yea== it~does~ work^2^ :joy: highlight, subscript, superscript, emoji markdown not working Trie code in python</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Home on downside154</title>
+		<link>http://localhost:1313/</link>
+		<description>Recent content in Home on downside154</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 20 Oct 2023 17:53:54 +0900</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Node.Js Streams</title>
+				<link>http://localhost:1313/posts/node_streams/</link>
+				<pubDate>Fri, 20 Oct 2023 17:53:54 +0900</pubDate>
+				<guid>http://localhost:1313/posts/node_streams/</guid>
+				<description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;&#xA;&lt;p&gt;Node.js has a built-in support for streams.&#xA;Streams are a fundamental concept in Node.js that enable efficient data handling, esp when dealing with large amounts of information OR working with data in real time.&lt;/p&gt;&#xA;&lt;p&gt;Summary:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Explore the concept of streams in Node.js&lt;/li&gt;&#xA;&lt;li&gt;Understand the different types of streams available (Readable, Writable, Duplex, and Transform)&lt;/li&gt;&#xA;&lt;li&gt;Discuss best practices for working with streams effectively.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;what-are-nodejs-streams&#34;&gt;What are Node.js Streams?&lt;/h3&gt;&#xA;&lt;p&gt;Streams enable efficient data handling by reading or writing input/output sequentially. They are handy for file operations, network communications, and other forms of end-to-end data exchange.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Database Indexing Strategies</title>
+				<link>http://localhost:1313/posts/db_indexing/</link>
+				<pubDate>Fri, 20 Oct 2023 17:46:49 +0900</pubDate>
+				<guid>http://localhost:1313/posts/db_indexing/</guid>
+				<description>&lt;hr&gt;&#xA;&lt;p&gt;Acknowledgement&#xA;&lt;a href=&#34;https://blog.bytebytego.com/p/database-indexing-strategies&#34;&gt;link 1&lt;/a&gt;&#xA;&lt;a href=&#34;https://blog.bytebytego.com/p/database-indexing-strategies-part?r=1nwcx&#34;&gt;link 2&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Multi-threading with nodejs</title>
+				<link>http://localhost:1313/posts/multi_thread_nodejs/</link>
+				<pubDate>Fri, 20 Oct 2023 16:49:20 +0900</pubDate>
+				<guid>http://localhost:1313/posts/multi_thread_nodejs/</guid>
+				<description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;What is Multithreading&lt;/li&gt;&#xA;&lt;li&gt;How does Node.js handle asynchronous operations.&lt;/li&gt;&#xA;&lt;li&gt;How to use Node&amp;rsquo;s &lt;code&gt;worker-threads&lt;/code&gt; module to create and manage threads.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;history&#34;&gt;History&lt;/h3&gt;&#xA;&lt;p&gt;Computers are becoming more powerful thanks to GPUs and multi-cre CPUs, and modern applications leverage &lt;strong&gt;threads(independent execution units in a process)&lt;/strong&gt; to maximize application performance&lt;/p&gt;&#xA;&lt;p&gt;However, &lt;strong&gt;JavaScript is a synchronous, blocking, single-threaded language&lt;/strong&gt;. It was initially created to run on browsers, allowing for much of modern web page interactions, form validations, animations, and so on. Running operations on a single thread can block the synchronous execution flow and result in bottlenecks.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Python Enviroment</title>
+				<link>http://localhost:1313/posts/python_enviroment/</link>
+				<pubDate>Tue, 03 Oct 2023 23:18:10 +0900</pubDate>
+				<guid>http://localhost:1313/posts/python_enviroment/</guid>
+				<description>&lt;h2 id=&#34;anaconda&#34;&gt;Anaconda&lt;/h2&gt;&#xA;&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/images/anaconda.png&#34; width=&#34;600px&#34;&gt;&lt;figcaption&gt;&#xA; &#x9;&#x9;&#x9;&lt;h4&gt;Anaconda(python distributor)&lt;/h4&gt;&#xA; &#x9;&#x9;&lt;/figcaption&gt;&#xA; &lt;/figure&gt;&#xA;&#xA;&lt;a href=&#34;https://www.anaconda.com/products/individual&#34;&gt;anaconda download link&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Anaconda is a distribution of the Python and R programming languages that aims to &lt;strong&gt;simplify package management and deployment&lt;/strong&gt;. It was initially released in July 17, 2021 by &lt;em&gt;Continuum analytics&lt;/em&gt; under the Freemium license but other editions are SaaS.&lt;/p&gt;&#xA;&lt;h2 id=&#34;google-colaboratory-colab&#34;&gt;Google Colaboratory (Colab)&lt;/h2&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/images/colab.png&#34; width=&#34;600px&#34;&gt;&lt;figcaption&gt;&#xA; &#x9;&#x9;&#x9;&lt;h4&gt;Google Colaboratory&lt;/h4&gt;&#xA; &#x9;&#x9;&lt;/figcaption&gt;&#xA; &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Colab allows users to write and execute python code on the browser. It is used by students, DS, AI programmers, and many more due to its ease of use.&#xA;&lt;a href=&#34;https://colab.research.google.com/&#34;&gt;Google Colab&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Pandas</title>
+				<link>http://localhost:1313/posts/pandas/</link>
+				<pubDate>Mon, 28 Aug 2023 17:54:30 +0900</pubDate>
+				<guid>http://localhost:1313/posts/pandas/</guid>
+				<description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Pandas is an open-source python data analysis library created by &lt;strong&gt;Wes McKinney&lt;/strong&gt; for &lt;strong&gt;quantitative finance&lt;/strong&gt; (hence it&amp;rsquo;s name &lt;strong&gt;pandas&lt;/strong&gt; from &amp;ldquo;PANel DAta System&amp;rdquo;, an econometrics term for data sets that include observations over multiple time periods). It was initially released on January 11th, 2008 and continues to be one of the most popular python tools used when handing data sets nowadays.&lt;/p&gt;&#xA;&lt;h3 id=&#34;basic-building-blocks&#34;&gt;Basic Building Blocks&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;1 dimensional : Series, TimeSeries&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>SVG(Scalable Vector Graphics)</title>
+				<link>http://localhost:1313/posts/svg/</link>
+				<pubDate>Sun, 27 Aug 2023 14:48:47 +0900</pubDate>
+				<guid>http://localhost:1313/posts/svg/</guid>
+				<description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;h2 id=&#34;deep-dive-into-svg&#34;&gt;Deep dive into SVG&lt;/h2&gt;&#xA;&lt;p&gt;SVG code for an icon is usually made up of a bunch of &lt;code&gt;path&lt;/code&gt; elements with &lt;code&gt;d&lt;/code&gt; attribute(aka. path data).&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/images/svg_heart_vector.png&#34; width=&#34;400px&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;path-data&#34;&gt;Path Data&lt;/h3&gt;&#xA;&lt;p&gt;The &lt;code&gt;d&lt;/code&gt; attribute is a series of commands that tell the browser how the path should be drawn.&#xA;Below is an example of a &lt;code&gt;d&lt;/code&gt; attribute cleaned up:&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/images/svg_heart_drawing1.png&#34; width=&#34;800px&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;All path commands follow the same basic syntax - a single letter code followed by a series of numbers. The letter code identifies the command type, while the numbers act as the command&amp;rsquo;s parameters.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Web Application Server(WAS)</title>
+				<link>http://localhost:1313/posts/was/</link>
+				<pubDate>Sat, 12 Aug 2023 20:50:32 +0900</pubDate>
+				<guid>http://localhost:1313/posts/was/</guid>
+				<description>&lt;h3 id=&#34;http&#34;&gt;HTTP&lt;/h3&gt;&#xA;&lt;p&gt;all web browsers communicate through HTTP&#xA;client -&amp;gt; internet -&amp;gt; server&lt;/p&gt;&#xA;&lt;h3 id=&#34;server-vs-wasweb-application-server&#34;&gt;Server vs WAS(web application server)&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Web Server - HTTP, static content(HTML, CSS, JS, IMAGES, VIDEO), etc&amp;hellip;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;in simple terms, it&amp;rsquo;s a server that hosts and serves content to the client, used for simple tasks like serving static files, managing client connections, and handling basic request-response.&#xA;ex: NGINX, APACHE&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;WAS - Web Server + dynamic content, runs application logic code to provide dynamic HTML, API (JSON), SERVLET, JSP, SPRING MVC&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;WAS provides an environment where developers can build, deploy, and run applications that process and generate dynamic content.&#xA;&lt;em&gt;KEY FEATURES&lt;/em&gt;&lt;/li&gt;&#xA;&lt;li&gt;middleware services: security, transaction management, messaging, etc..&lt;/li&gt;&#xA;&lt;li&gt;Application Deployment: deploying and managing web applications.&lt;/li&gt;&#xA;&lt;li&gt;Scalability: load balancing and distributing application load across multiple instances.&lt;/li&gt;&#xA;&lt;li&gt;Database Connectivity: connect to databases to fetch and update data&#xA;ex: Apache Tomcat, Jetty, Undertow, Oracle WebLogic.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;DIFFERENCE&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;static (web server) vs dynamic(was)&lt;/li&gt;&#xA;&lt;li&gt;terminology is used interchangeably&#xA;&lt;em&gt;in java, we call something as WAS if it has a servlete container(although some modern exceptions exist)&lt;/em&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+			<item>
+				<title>IaC</title>
+				<link>http://localhost:1313/posts/ioc/</link>
+				<pubDate>Wed, 19 Jul 2023 12:32:52 +0900</pubDate>
+				<guid>http://localhost:1313/posts/ioc/</guid>
+				<description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Infrastructure as code (IaC) is an approach to managing and provisioning infrastructure resources through software and automated processes, rather than manual processes. It involves using machine-readable configuration files or scripts to define and control the infrastructure, treating it as code. With IaC, infrastructure resources such as networks, compute services, databases, and storage can be defined, managed, and deployed in a standardized, versioned, and parameterized manner.&lt;/p&gt;&#xA;&lt;h3 id=&#34;imperative-vs-declarative-iac&#34;&gt;Imperative vs Declarative IaC&lt;/h3&gt;&#xA;&lt;p&gt;IaC allows you to define your infrastructure resources in a descriptive model, specifying the desired outcome rather than the specific steps to achieve it. This approach is known as &lt;strong&gt;declarative infrastructure as code&lt;/strong&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Apache Tomcat</title>
+				<link>http://localhost:1313/posts/apache_tomcat/</link>
+				<pubDate>Tue, 04 Jul 2023 15:57:49 +0900</pubDate>
+				<guid>http://localhost:1313/posts/apache_tomcat/</guid>
+				<description>&lt;h2 id=&#34;what-is-apache-tomcat&#34;&gt;What is Apache Tomcat?&lt;/h2&gt;&#xA;&lt;p&gt;In web development, Apache Tomcat is an open-source web server and servlet container. It is designed to execute Java servlets and render JavaServer Pages(JSPs) to serve dynamic web content.&lt;/p&gt;&#xA;&lt;h3 id=&#34;tomcat-is-widely-used-as-a-web-application-server-for-hosting-java-based-web-applications&#34;&gt;Tomcat is widely used as a web application server for hosting Java-based web applications.&lt;/h3&gt;&#xA;&lt;p&gt;It provides a &lt;strong&gt;Java Servlet API&lt;/strong&gt; implementation and supports the Java Enterprise Edition (Java EE) specifications. Developers can write servlets and JSPs, which are Java-based components, and deploy them on Tomcat for execution. The Spring Framework provides various features and abstractions to simplify web development, and Tomcat can be used as the underlying web server to deploy Spring-based applications.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>MacOS Command Line Tools</title>
+				<link>http://localhost:1313/posts/macos_cltools/</link>
+				<pubDate>Wed, 28 Jun 2023 00:15:38 +0900</pubDate>
+				<guid>http://localhost:1313/posts/macos_cltools/</guid>
+				<description>&lt;p&gt;This post will have some command line tools used in macOS. Truth be told, I do not use ALL of these commands all of the time but I consider them useful nonetheless.&lt;/p&gt;&#xA;&lt;h3 id=&#34;caffeinate-sleep&#34;&gt;caffeinate (sleep)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;caffeinate&lt;/code&gt; to prevent your mac from going to sleep as long as the command is running.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;caffeinate -u -t &amp;lt;seconds&amp;gt;&lt;/code&gt; to specify the time.&#xA;Adding the &lt;code&gt;-d&lt;/code&gt; flag prevents the display from going to sleep.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;caffeinate &amp;lt;command&amp;gt;&lt;/code&gt; will start the command in a new process and will prevent sleep until that process exits.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;textutils-document-file-converter&#34;&gt;textutils (document file converter)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;textutil&lt;/code&gt; converts files to and from MS Word, plain text, rich text, and HTML formats.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;textutil -convert html text.doc&lt;/code&gt; converts &lt;strong&gt;text.doc&lt;/strong&gt; into &lt;strong&gt;text.html&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Possible values for &lt;code&gt;-convert&lt;/code&gt; are : &lt;strong&gt;txt, html, rtf, rtfd, doc, docx&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;mdfind-search-with-spotlight&#34;&gt;mdfind (search with Spotlight)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;mdfind &amp;lt;query&amp;gt;&lt;/code&gt; performs a keyword-based Spotlight search with the query.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;mdfind kMDItemAppStoreHasReceipt=1&lt;/code&gt; finds all apps installed from the App Store.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;mdfind name &amp;lt;name&amp;gt;&lt;/code&gt; searches all files with the name &lt;strong&gt;name&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-onlyin &amp;lt;dir&amp;gt;&lt;/code&gt; flag restricts the search to a given directory.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;networkquality-measure-internet-speed&#34;&gt;networkQuality (measure Internet speed)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;networkQuality&lt;/code&gt; to run an Internet Speed test from your Mac.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-v&lt;/code&gt; flag for verbose.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-i&lt;/code&gt; flag to run a network test on a specific network interface.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;screencapture-screenshots&#34;&gt;screencapture (screenshots)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;screencapture -c&lt;/code&gt; to take a screenshot and copy to clipboard.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;screencapture &amp;lt;file&amp;gt;&lt;/code&gt; to take screenshot and save to a file.&lt;/li&gt;&#xA;&lt;li&gt;Add the &lt;code&gt;-T &amp;lt;seconds&amp;gt;&lt;/code&gt; to take the screenshot after a certain time.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;pbcopy-and-pbpase&#34;&gt;pbcopy and pbpase&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;&amp;lt;command&amp;gt; | pbcopy&lt;/code&gt; copies the output of the command to the clipboard.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;pbpaste&lt;/code&gt; outputs the contents of the clipboard to stdout.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;MacOS:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>OOP</title>
+				<link>http://localhost:1313/posts/oop/</link>
+				<pubDate>Mon, 19 Jun 2023 09:38:57 +0900</pubDate>
+				<guid>http://localhost:1313/posts/oop/</guid>
+				<description>&lt;p&gt;OOP (object oriented programming) is a programming paradigm based on the concept of &lt;strong&gt;objects&lt;/strong&gt;. Data is in the form of fields(aka. attributes or properties) and the code is in the form of procedures (aka methods).&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/images/oop.jpeg&#34; width=&#34;600px&#34;&gt;&lt;figcaption&gt;&#xA;&#x9;&#x9;&#x9;&lt;h4&gt;OOP Concepts&lt;/h4&gt;&#xA;&#x9;&#x9;&lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Random fact of the day: The acronym OOP can refer to a lot of things, even as a jargon for software developers.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Object Oriented Positioning&lt;/li&gt;&#xA;&lt;li&gt;Object Oriented Programming&lt;/li&gt;&#xA;&lt;li&gt;Out of Position&lt;/li&gt;&#xA;&lt;li&gt;Ordinary Object Pointer (JDK)&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+			<item>
+				<title>First Post</title>
+				<link>http://localhost:1313/posts/first_post/</link>
+				<pubDate>Fri, 17 Feb 2023 16:18:35 +0900</pubDate>
+				<guid>http://localhost:1313/posts/first_post/</guid>
+				<description>&lt;h2 id=&#34;introduction--test-post&#34;&gt;Introduction : Test Post&lt;/h2&gt;&#xA;&lt;p&gt;As the first post of this blog. It seems only fitting that this be the place where I test out the features of Hugo.&lt;/p&gt;&#xA;&lt;h3 id=&#34;testing&#34;&gt;Testing&lt;/h3&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;&#xA;&lt;p&gt;Table&lt;/p&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;test1&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;test2&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;test3&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;test4&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;test5&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;6&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;7&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;8&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;9&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;10&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;11&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;12&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;13&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;14&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;15&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;hr&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; checking if extended markdown &lt;del&gt;works&lt;/del&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; ==yea== it&lt;del&gt;does&lt;/del&gt; work^2^ :joy:&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; highlight, subscript, superscript, emoji markdown not working&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Trie code in python&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

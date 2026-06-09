@@ -2,7 +2,9 @@
 title: "IaC"
 date: 2023-07-19T12:32:52+09:00
 draft: false
-tags: ["programming", "IaC"]
+tags: ["IaC"]
+categories: ["Engineering"]
+description: "Infrastructure as Code — provisioning infrastructure through versioned, machine-readable config."
 featured_image: "/images/iac.jpeg"
 ---
 

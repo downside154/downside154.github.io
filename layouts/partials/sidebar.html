@@ -1,0 +1,44 @@
+{{- /* Right sidebar: About card + Browse tags + Series. */ -}}
+{{- $a := site.Params.author -}}
+<aside class="sidebar">
+  <div class="about-card">
+    <div class="avatar" style="width:52px;height:52px;font-size:19px;">{{ $a.initials }}</div>
+    <div class="about-card__name">{{ $a.name }}</div>
+    <div class="about-card__bio">{{ $a.bio }}</div>
+    <div class="about-card__links">
+      <a class="btn-acc" href="{{ relURL "/about/" }}">About me</a>
+      {{ with site.Params.github }}<a class="chip-acc" href="{{ . }}">GitHub</a>{{ end }}
+      {{ with site.Home.OutputFormats.Get "RSS" }}<a class="chip-acc" href="{{ .RelPermalink }}">RSS</a>{{ end }}
+    </div>
+  </div>
+
+  {{ with site.Taxonomies.tags }}
+  <div class="side-block">
+    <div class="side-block__title">Browse tags</div>
+    <div class="tag-cloud">
+      {{ range first 14 .ByCount }}{{ partial "tag.html" .Term }}{{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{ with hugo.Data.series }}
+  <div class="side-block">
+    <div class="side-block__title">Series</div>
+    <div class="series-list">
+      {{ range $id, $s := . }}
+        {{ $count := 0 }}{{ with index site.Taxonomies.series $id }}{{ $count = len .Pages }}{{ end }}
+        {{ if gt $count 0 }}
+        {{ $initials := "" }}{{ range (split $s.title " ") }}{{ $initials = printf "%s%s" $initials (substr . 0 1) }}{{ end }}
+        <a class="series-item" href="{{ printf "/series/%s/" $id | relURL }}">
+          <div class="series-item__badge" style="background:{{ $s.color }}1A;color:{{ $s.color }}">{{ upper (substr $initials 0 2) }}</div>
+          <div class="series-item__text">
+            <div class="series-item__title">{{ $s.title }}</div>
+            <div class="series-item__count">{{ $count }} parts</div>
+          </div>
+        </a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+</aside>

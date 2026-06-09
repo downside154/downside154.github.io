@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>server on A Random Blog with Posts</title>
-    <link>https://downside154.github.io/tags/server/</link>
-    <description>Recent content in server on A Random Blog with Posts</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 12 Aug 2023 20:50:32 +0900</lastBuildDate>
-    <atom:link href="https://downside154.github.io/tags/server/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Web Application Server(WAS)</title>
-      <link>https://downside154.github.io/posts/was/</link>
-      <pubDate>Sat, 12 Aug 2023 20:50:32 +0900</pubDate>
-      <guid>https://downside154.github.io/posts/was/</guid>
-      <description>HTTP all web browsers communicate through HTTP client -&amp;gt; internet -&amp;gt; server
-Server vs WAS(web application server) Web Server - HTTP, static content(HTML, CSS, JS, IMAGES, VIDEO), etc&amp;hellip;. in simple terms, it&amp;rsquo;s a server that hosts and serves content to the client, used for simple tasks like serving static files, managing client connections, and handling basic request-response. ex: NGINX, APACHE WAS - Web Server + dynamic content, runs application logic code to provide dynamic HTML, API (JSON), SERVLET, JSP, SPRING MVC WAS provides an environment where developers can build, deploy, and run applications that process and generate dynamic content.</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Server on downside154</title>
+		<link>http://localhost:1313/tags/server/</link>
+		<description>Recent content in Server on downside154</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 12 Aug 2023 20:50:32 +0900</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/server/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Web Application Server(WAS)</title>
+				<link>http://localhost:1313/posts/was/</link>
+				<pubDate>Sat, 12 Aug 2023 20:50:32 +0900</pubDate>
+				<guid>http://localhost:1313/posts/was/</guid>
+				<description>&lt;h3 id=&#34;http&#34;&gt;HTTP&lt;/h3&gt;&#xA;&lt;p&gt;all web browsers communicate through HTTP&#xA;client -&amp;gt; internet -&amp;gt; server&lt;/p&gt;&#xA;&lt;h3 id=&#34;server-vs-wasweb-application-server&#34;&gt;Server vs WAS(web application server)&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Web Server - HTTP, static content(HTML, CSS, JS, IMAGES, VIDEO), etc&amp;hellip;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;in simple terms, it&amp;rsquo;s a server that hosts and serves content to the client, used for simple tasks like serving static files, managing client connections, and handling basic request-response.&#xA;ex: NGINX, APACHE&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;WAS - Web Server + dynamic content, runs application logic code to provide dynamic HTML, API (JSON), SERVLET, JSP, SPRING MVC&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;WAS provides an environment where developers can build, deploy, and run applications that process and generate dynamic content.&#xA;&lt;em&gt;KEY FEATURES&lt;/em&gt;&lt;/li&gt;&#xA;&lt;li&gt;middleware services: security, transaction management, messaging, etc..&lt;/li&gt;&#xA;&lt;li&gt;Application Deployment: deploying and managing web applications.&lt;/li&gt;&#xA;&lt;li&gt;Scalability: load balancing and distributing application load across multiple instances.&lt;/li&gt;&#xA;&lt;li&gt;Database Connectivity: connect to databases to fetch and update data&#xA;ex: Apache Tomcat, Jetty, Undertow, Oracle WebLogic.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;DIFFERENCE&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;static (web server) vs dynamic(was)&lt;/li&gt;&#xA;&lt;li&gt;terminology is used interchangeably&#xA;&lt;em&gt;in java, we call something as WAS if it has a servlete container(although some modern exceptions exist)&lt;/em&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+	</channel>
 </rss>

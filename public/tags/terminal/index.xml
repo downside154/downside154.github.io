@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>terminal on A Random Blog with Posts</title>
-    <link>https://downside154.github.io/tags/terminal/</link>
-    <description>Recent content in terminal on A Random Blog with Posts</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 28 Jun 2023 00:15:38 +0900</lastBuildDate>
-    <atom:link href="https://downside154.github.io/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>MacOS Command Line Tools</title>
-      <link>https://downside154.github.io/posts/macos_cltools/</link>
-      <pubDate>Wed, 28 Jun 2023 00:15:38 +0900</pubDate>
-      <guid>https://downside154.github.io/posts/macos_cltools/</guid>
-      <description>This post will have some command line tools used in macOS. Truth be told, I do not use ALL of these commands all of the time but I consider them useful nonetheless.
-caffeinate (sleep) caffeinate to prevent your mac from going to sleep as long as the command is running. caffeinate -u -t &amp;lt;seconds&amp;gt; to specify the time. Adding the -d flag prevents the display from going to sleep. caffeinate &amp;lt;command&amp;gt; will start the command in a new process and will prevent sleep until that process exits.</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Terminal on downside154</title>
+		<link>http://localhost:1313/tags/terminal/</link>
+		<description>Recent content in Terminal on downside154</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 28 Jun 2023 00:15:38 +0900</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>MacOS Command Line Tools</title>
+				<link>http://localhost:1313/posts/macos_cltools/</link>
+				<pubDate>Wed, 28 Jun 2023 00:15:38 +0900</pubDate>
+				<guid>http://localhost:1313/posts/macos_cltools/</guid>
+				<description>&lt;p&gt;This post will have some command line tools used in macOS. Truth be told, I do not use ALL of these commands all of the time but I consider them useful nonetheless.&lt;/p&gt;&#xA;&lt;h3 id=&#34;caffeinate-sleep&#34;&gt;caffeinate (sleep)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;caffeinate&lt;/code&gt; to prevent your mac from going to sleep as long as the command is running.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;caffeinate -u -t &amp;lt;seconds&amp;gt;&lt;/code&gt; to specify the time.&#xA;Adding the &lt;code&gt;-d&lt;/code&gt; flag prevents the display from going to sleep.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;caffeinate &amp;lt;command&amp;gt;&lt;/code&gt; will start the command in a new process and will prevent sleep until that process exits.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;textutils-document-file-converter&#34;&gt;textutils (document file converter)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;textutil&lt;/code&gt; converts files to and from MS Word, plain text, rich text, and HTML formats.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;textutil -convert html text.doc&lt;/code&gt; converts &lt;strong&gt;text.doc&lt;/strong&gt; into &lt;strong&gt;text.html&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Possible values for &lt;code&gt;-convert&lt;/code&gt; are : &lt;strong&gt;txt, html, rtf, rtfd, doc, docx&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;mdfind-search-with-spotlight&#34;&gt;mdfind (search with Spotlight)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;mdfind &amp;lt;query&amp;gt;&lt;/code&gt; performs a keyword-based Spotlight search with the query.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;mdfind kMDItemAppStoreHasReceipt=1&lt;/code&gt; finds all apps installed from the App Store.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;mdfind name &amp;lt;name&amp;gt;&lt;/code&gt; searches all files with the name &lt;strong&gt;name&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-onlyin &amp;lt;dir&amp;gt;&lt;/code&gt; flag restricts the search to a given directory.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;networkquality-measure-internet-speed&#34;&gt;networkQuality (measure Internet speed)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;networkQuality&lt;/code&gt; to run an Internet Speed test from your Mac.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-v&lt;/code&gt; flag for verbose.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-i&lt;/code&gt; flag to run a network test on a specific network interface.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;screencapture-screenshots&#34;&gt;screencapture (screenshots)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;screencapture -c&lt;/code&gt; to take a screenshot and copy to clipboard.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;screencapture &amp;lt;file&amp;gt;&lt;/code&gt; to take screenshot and save to a file.&lt;/li&gt;&#xA;&lt;li&gt;Add the &lt;code&gt;-T &amp;lt;seconds&amp;gt;&lt;/code&gt; to take the screenshot after a certain time.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;pbcopy-and-pbpase&#34;&gt;pbcopy and pbpase&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;&amp;lt;command&amp;gt; | pbcopy&lt;/code&gt; copies the output of the command to the clipboard.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;pbpaste&lt;/code&gt; outputs the contents of the clipboard to stdout.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;MacOS:&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

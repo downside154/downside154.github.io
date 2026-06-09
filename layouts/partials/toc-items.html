@@ -1,0 +1,6 @@
+{{- /* Recursive TOC renderer. Descends .Fragments.Headings (document order),
+       rendering only level 2–3 headings; skips the empty root wrapper and h4+. */ -}}
+{{- range . -}}
+  {{- if and .ID (le .Level 3) }}<a class="toc__item toc__item--l{{ .Level }}" href="#{{ .ID }}" data-toc="{{ .ID }}">{{ .Title }}</a>{{ end -}}
+  {{- with .Headings }}{{ partial "toc-items.html" . }}{{ end -}}
+{{- end -}}

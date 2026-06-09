@@ -3,6 +3,8 @@ title: "Web Application Server(WAS)"
 date: 2023-08-12T20:50:32+09:00
 draft: false
 tags: ["server"]
+categories: ["Engineering"]
+description: "What a Web Application Server does, and how it differs from a plain web server."
 ---
 
 ### HTTP

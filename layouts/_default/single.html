@@ -1,0 +1,104 @@
+{{ define "main" }}
+{{- $p := . -}}
+{{- $cat := "" -}}{{- with .Params.categories }}{{ $cat = index . 0 }}{{ end -}}
+{{- $catURL := relURL "/" -}}{{- with $cat }}{{ $catURL = printf "/categories/%s/" (. | urlize) | relURL }}{{ end -}}
+{{- $sid := "" -}}{{- with .Params.series }}{{ if reflect.IsSlice . }}{{ $sid = index . 0 }}{{ else }}{{ $sid = . }}{{ end }}{{ end -}}
+{{- $s := "" -}}{{- with $sid }}{{ $s = index hugo.Data.series . }}{{ end -}}
+
+<div class="progress"><div class="progress__bar" data-progress-bar></div></div>
+
+<div class="article">
+  <div class="article__grid">
+    {{/* ── TOC ── */}}
+    <div class="toc">
+      <div class="toc__sticky">
+        <a class="toc__back" href="{{ $catURL }}">← {{ $cat | default "Home" }}</a>
+        {{ with .Fragments.Headings }}
+          <div class="toc__label">ON THIS PAGE</div>
+          {{ partial "toc-items.html" . }}
+        {{ end }}
+      </div>
+    </div>
+
+    {{/* ── article ── */}}
+    <article class="article__main">
+      <div class="article__cat-row">
+        {{ with $cat }}{{ partial "cat.html" (dict "name" . "url" $catURL) }}{{ end }}
+        {{ with $s }}<a class="series-link" style="color:{{ .color }}" href="{{ printf "/series/%s/" $sid | relURL }}">↳ {{ .title }}</a>{{ end }}
+      </div>
+      <h1 class="article__title">{{ .Title }}</h1>
+      {{ with .Description }}<p class="article__deck">{{ . }}</p>{{ end }}
+      <div class="article__byline">
+        <div class="article__meta">
+          <span>{{ .Date.Format "Jan 2, 2006" }}</span><span class="dot"></span><span>{{ .ReadingTime }} min read</span>
+        </div>
+        <div class="article__actions">
+          <button type="button" data-share>Share</button>
+          <button type="button" data-save>Save</button>
+        </div>
+      </div>
+
+      {{/* ── series widget ── */}}
+      {{ with $s }}
+        {{ $sposts := sort (index site.Taxonomies.series $sid).Pages "Date" "asc" }}
+        {{ $total := len $sposts }}{{ $cur := 0 }}
+        {{ range $k, $sp := $sposts }}{{ if eq $sp.Permalink $p.Permalink }}{{ $cur = (add $k 1) }}{{ end }}{{ end }}
+        {{ $pct := 0 }}{{ if gt $total 0 }}{{ $pct = div (mul $cur 100) $total }}{{ end }}
+        <div class="series-widget">
+          <div class="series-widget__badge" style="background:{{ .color }}1A;color:{{ .color }}">{{ $cur }}/{{ $total }}</div>
+          <div class="series-widget__body">
+            <div class="series-widget__label">Part {{ $cur }} of the “{{ .title }}” series</div>
+            <div class="series-widget__track"><div class="series-widget__fill" style="width:{{ $pct }}%;background:{{ .color }}"></div></div>
+          </div>
+        </div>
+      {{ end }}
+
+      {{/* ── body ── */}}
+      <div class="post-body">
+        {{ .Content }}
+      </div>
+
+      {{/* ── tags ── */}}
+      {{ with .Params.tags }}
+      <div class="article__tags">
+        {{ range . }}{{ partial "tag.html" . }}{{ end }}
+      </div>
+      {{ end }}
+
+      {{/* ── prev / next (by date order) ── */}}
+      <div class="prevnext">
+        {{ with .NextInSection }}
+        <a class="prevnext__card" href="{{ .RelPermalink }}"><div class="prevnext__label">← Previous</div><div class="prevnext__title">{{ .Title }}</div></a>
+        {{ else }}<div></div>{{ end }}
+        {{ with .PrevInSection }}
+        <a class="prevnext__card prevnext__card--next" href="{{ .RelPermalink }}"><div class="prevnext__label">Next →</div><div class="prevnext__title">{{ .Title }}</div></a>
+        {{ else }}<div></div>{{ end }}
+      </div>
+    </article>
+  </div>
+
+  {{/* ── related "Keep reading" ── */}}
+  {{- $rel := slice -}}
+  {{- range (where site.RegularPages "Section" "posts") -}}
+    {{- if ne .Permalink $p.Permalink -}}
+      {{- $share := false -}}
+      {{- with $cat }}{{ with $.Params.categories }}{{ if in . $cat }}{{ $share = true }}{{ end }}{{ end }}{{ end -}}
+      {{- if and (.Params.tags) ($p.Params.tags) }}{{ if intersect .Params.tags $p.Params.tags }}{{ $share = true }}{{ end }}{{ end -}}
+      {{- if $share }}{{ $rel = $rel | append . }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $rel = first 3 $rel -}}
+  {{ if gt (len $rel) 0 }}
+  <div class="related">
+    <div class="related__title">Keep reading</div>
+    <div class="related__grid">
+      {{ range $rel }}{{ partial "post-card.html" . }}{{ end }}
+    </div>
+  </div>
+  {{ end }}
+</div>
+
+<button class="to-top" data-to-top aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13V3M3 8l5-5 5 5"/></svg>
+</button>
+{{ end }}

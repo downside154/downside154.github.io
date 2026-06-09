@@ -1,0 +1,21 @@
+{{- /* Thumbnail-left feed row. Context: a post Page. */ -}}
+{{- $p := . -}}
+{{- $cat := "" -}}{{- with $p.Params.categories }}{{ $cat = index . 0 }}{{ end -}}
+{{- $sid := "" -}}{{- with $p.Params.series }}{{ if reflect.IsSlice . }}{{ $sid = index . 0 }}{{ else }}{{ $sid = . }}{{ end }}{{ end -}}
+{{- $deck := $p.Description -}}{{- if not $deck }}{{ $deck = $p.Summary | plainify | htmlUnescape }}{{ end -}}
+{{- $tagstr := "" -}}{{- with $p.Params.tags }}{{ $tagstr = delimit (apply . "lower" ".") " " }}{{ end -}}
+<article class="row" data-href="{{ $p.RelPermalink }}" data-category="{{ $cat }}" data-tags="{{ $tagstr }}" data-date="{{ $p.Date.Format "2006-01-02" }}">
+  {{ partial "thumb.html" (dict "page" $p "class" "row__thumb" "label" true) }}
+  <div class="row__body">
+    <div class="row__meta-top">
+      {{ with $cat }}{{ partial "cat.html" (dict "name" .) }}{{ end }}
+      {{ with $sid }}{{ $s := index hugo.Data.series . }}{{ with $s }}<a class="series-link" style="color:{{ .color }}" href="{{ printf "/series/%s/" $sid | relURL }}">↳ {{ .title }}</a>{{ end }}{{ end }}
+    </div>
+    <a class="row__title" href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
+    {{ with $deck }}<p class="row__deck">{{ . }}</p>{{ end }}
+    <div class="row__meta">
+      <span class="row__date">{{ $p.Date.Format "Jan 2, 2006" }} · {{ $p.ReadingTime }} min read</span>
+      {{ with $p.Params.tags }}<span class="row__dot"></span><span class="row__tags">{{ range first 3 . }}{{ partial "tag.html" . }}{{ end }}</span>{{ end }}
+    </div>
+  </div>
+</article>

@@ -3,6 +3,9 @@ title: "Pandas"
 date: 2023-08-28T17:54:30+09:00
 draft: false
 tags: ["python", "pandas"]
+categories: ["Engineering"]
+series: ["python"]
+description: "A practical introduction to pandas — the Python library that quietly runs modern data analysis."
 featured_image: "/images/pandas_svg.png"
 ---
 

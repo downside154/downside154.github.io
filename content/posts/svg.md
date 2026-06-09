@@ -3,6 +3,8 @@ title: "SVG(Scalable Vector Graphics)"
 date: 2023-08-27T14:48:47+09:00
 draft: false
 tags: ["FE"]
+categories: ["Engineering"]
+description: "Scalable Vector Graphics from the ground up — paths, curves, and drawing with math."
 featured_image: "/images/svg_heart_vector.png"
 
 ---

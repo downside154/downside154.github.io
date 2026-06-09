@@ -1,0 +1,11 @@
+{{- /* ⌘K search overlay. Rows are rendered client-side from index.json. */ -}}
+<div class="search" data-search data-index="{{ "index.json" | relURL }}" aria-hidden="true">
+  <div class="search__modal" role="dialog" aria-label="Search">
+    <div class="search__head">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#6B6863" stroke-width="1.8"><circle cx="7.5" cy="7.5" r="5.5"/><path d="M12 12l4 4" stroke-linecap="round"/></svg>
+      <input class="search__input" data-search-input type="text" placeholder="Search posts, tags, topics…" autocomplete="off" spellcheck="false">
+      <span class="search__esc">ESC</span>
+    </div>
+    <div class="search__results" data-search-results></div>
+  </div>
+</div>

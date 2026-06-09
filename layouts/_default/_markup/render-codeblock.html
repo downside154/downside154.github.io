@@ -1,0 +1,9 @@
+{{- /* Dark mac-window code block matching the Roster design. */ -}}
+{{- $lang := .Type | default "text" -}}
+<div class="code-block">
+  <div class="code-head">
+    <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+    <span class="code-lang">{{ $lang }}</span>
+  </div>
+  {{ highlight (trim .Inner "\n") $lang "lineNos=table,tabWidth=2" }}
+</div>

@@ -3,6 +3,9 @@ title: "Multi-threading with nodejs"
 date: 2023-10-20T16:49:20+09:00
 draft: false
 tags: ["node"]
+categories: ["Engineering"]
+series: ["nodejs"]
+description: "How Node.js handles concurrency — the event loop, worker threads, and when multithreading actually helps."
 featured_image: "/images/node.png"
 ---
 

@@ -1,0 +1,10 @@
+{{- /* Category chip, color-coded: Engineering = Forest Teal, Culture = Stormy Indigo.
+       Params: name (required), url (optional → renders a link). */ -}}
+{{- $name := .name -}}{{- $url := .url -}}
+{{- $c := "#005240" -}}{{- $soft := "#DCE8E3" -}}
+{{- if eq $name "Culture" -}}{{- $c = "#37515F" -}}{{- $soft = "#E2E7E9" -}}{{- end -}}
+{{- if $url -}}
+<a class="cat" style="color:{{ $c }};background:{{ $soft }}" href="{{ $url }}">{{ $name }}</a>
+{{- else -}}
+<span class="cat" style="color:{{ $c }};background:{{ $soft }}">{{ $name }}</span>
+{{- end -}}

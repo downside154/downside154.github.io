@@ -3,6 +3,8 @@ title: "Apache Tomcat"
 date: 2023-07-04T15:57:49+09:00
 featured_image: "/images/tomcat.png"
 tags: ["tomcat", "apache", "java", "spring"]
+categories: ["Engineering"]
+description: "A look at Apache Tomcat — the servlet container behind countless Java web apps."
 draft: false
 
 ---

@@ -1,0 +1,6 @@
+{{- /* Tag pill. Context: a tag string. Hover color is a deterministic pick from
+       the brand palette, so tags spread all six accents across the page. */ -}}
+{{- $t := . -}}
+{{- $palette := slice "#5F4B8B" "#005240" "#307BA6" "#A10015" "#CF5C78" "#37515F" -}}
+{{- $c := index $palette (mod (hash.FNV32a $t) 6) -}}
+<a class="tag" style="--tag-c:{{ $c }}" href="{{ printf "/tags/%s/" ($t | urlize) | relURL }}">#{{ $t }}</a>

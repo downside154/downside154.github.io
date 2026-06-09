@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>database on A Random Blog with Posts</title>
-    <link>https://downside154.github.io/tags/database/</link>
-    <description>Recent content in database on A Random Blog with Posts</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 20 Oct 2023 17:46:49 +0900</lastBuildDate>
-    <atom:link href="https://downside154.github.io/tags/database/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Database Indexing Strategies</title>
-      <link>https://downside154.github.io/posts/db_indexing/</link>
-      <pubDate>Fri, 20 Oct 2023 17:46:49 +0900</pubDate>
-      <guid>https://downside154.github.io/posts/db_indexing/</guid>
-      <description>Acknowledgement link 1 link 2</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Database on downside154</title>
+		<link>http://localhost:1313/tags/database/</link>
+		<description>Recent content in Database on downside154</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 20 Oct 2023 17:46:49 +0900</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/database/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Database Indexing Strategies</title>
+				<link>http://localhost:1313/posts/db_indexing/</link>
+				<pubDate>Fri, 20 Oct 2023 17:46:49 +0900</pubDate>
+				<guid>http://localhost:1313/posts/db_indexing/</guid>
+				<description>&lt;hr&gt;&#xA;&lt;p&gt;Acknowledgement&#xA;&lt;a href=&#34;https://blog.bytebytego.com/p/database-indexing-strategies&#34;&gt;link 1&lt;/a&gt;&#xA;&lt;a href=&#34;https://blog.bytebytego.com/p/database-indexing-strategies-part?r=1nwcx&#34;&gt;link 2&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

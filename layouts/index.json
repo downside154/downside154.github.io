@@ -1,0 +1,19 @@
+{{- /* Client-side ⌘K search index. */ -}}
+{{- $list := slice -}}
+{{- range where site.RegularPages "Section" "posts" -}}
+  {{- $cat := "" -}}{{- with .Params.categories }}{{ $cat = index . 0 }}{{ end -}}
+  {{- $deck := .Description -}}{{- if not $deck }}{{ $deck = .Summary | plainify }}{{ end -}}
+  {{- $thumb := "" -}}{{- with .Params.featured_image }}{{ $thumb = . | relURL }}{{ end -}}
+  {{- $key := .Title -}}{{- with .File }}{{ $key = .ContentBaseName }}{{ end -}}
+  {{- $hue := mod (hash.FNV32a $key) 360 -}}
+  {{- $list = $list | append (dict
+        "title" .Title
+        "url" .RelPermalink
+        "cat" $cat
+        "deck" $deck
+        "tags" (.Params.tags | default slice)
+        "min" .ReadingTime
+        "thumb" $thumb
+        "hue" $hue) -}}
+{{- end -}}
+{{- jsonify $list -}}

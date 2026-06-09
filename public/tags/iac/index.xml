@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>IaC on A Random Blog with Posts</title>
-    <link>https://downside154.github.io/tags/iac/</link>
-    <description>Recent content in IaC on A Random Blog with Posts</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 19 Jul 2023 12:32:52 +0900</lastBuildDate>
-    <atom:link href="https://downside154.github.io/tags/iac/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>IaC</title>
-      <link>https://downside154.github.io/posts/ioc/</link>
-      <pubDate>Wed, 19 Jul 2023 12:32:52 +0900</pubDate>
-      <guid>https://downside154.github.io/posts/ioc/</guid>
-      <description>Summary Infrastructure as code (IaC) is an approach to managing and provisioning infrastructure resources through software and automated processes, rather than manual processes. It involves using machine-readable configuration files or scripts to define and control the infrastructure, treating it as code. With IaC, infrastructure resources such as networks, compute services, databases, and storage can be defined, managed, and deployed in a standardized, versioned, and parameterized manner.
-Imperative vs Declarative IaC IaC allows you to define your infrastructure resources in a descriptive model, specifying the desired outcome rather than the specific steps to achieve it.</description>
-    </item>
-  </channel>
+	<channel>
+		<title>IaC on downside154</title>
+		<link>http://localhost:1313/tags/iac/</link>
+		<description>Recent content in IaC on downside154</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 19 Jul 2023 12:32:52 +0900</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/iac/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>IaC</title>
+				<link>http://localhost:1313/posts/ioc/</link>
+				<pubDate>Wed, 19 Jul 2023 12:32:52 +0900</pubDate>
+				<guid>http://localhost:1313/posts/ioc/</guid>
+				<description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Infrastructure as code (IaC) is an approach to managing and provisioning infrastructure resources through software and automated processes, rather than manual processes. It involves using machine-readable configuration files or scripts to define and control the infrastructure, treating it as code. With IaC, infrastructure resources such as networks, compute services, databases, and storage can be defined, managed, and deployed in a standardized, versioned, and parameterized manner.&lt;/p&gt;&#xA;&lt;h3 id=&#34;imperative-vs-declarative-iac&#34;&gt;Imperative vs Declarative IaC&lt;/h3&gt;&#xA;&lt;p&gt;IaC allows you to define your infrastructure resources in a descriptive model, specifying the desired outcome rather than the specific steps to achieve it. This approach is known as &lt;strong&gt;declarative infrastructure as code&lt;/strong&gt;.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

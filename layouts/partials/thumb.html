@@ -1,0 +1,20 @@
+{{- /* RThumb: real cover image when a post sets featured_image, else a
+       deterministic gradient derived from the post's slug. Params: page, class, label */ -}}
+{{- $p := .page -}}
+{{- $class := .class | default "" -}}
+{{- $showLabel := .label | default false -}}
+{{- $cat := "" -}}{{- with $p.Params.categories }}{{ $cat = index . 0 }}{{ end -}}
+{{- $img := $p.Params.featured_image -}}
+{{- if $img -}}
+  <div class="thumb thumb--cover {{ $class }}" style="--thumb-img:url('{{ $img | relURL }}')" aria-hidden="true">
+    {{- if and $showLabel $cat }}<span class="thumb__label">{{ $cat }}</span>{{ end -}}
+  </div>
+{{- else -}}
+  {{- $key := $p.Title -}}{{- with $p.File }}{{ $key = .ContentBaseName }}{{ end -}}
+  {{- $hue := mod (hash.FNV32a $key) 360 -}}
+  {{- $hue2 := mod (add $hue 38) 360 -}}
+  <div class="thumb {{ $class }}" style="--thumb-a:hsl({{ $hue }}, 34%, 86%);--thumb-b:hsl({{ $hue2 }}, 40%, 78%)" aria-hidden="true">
+    <span class="thumb__sheen"></span><span class="thumb__ring"></span>
+    {{- if and $showLabel $cat }}<span class="thumb__label">{{ $cat }}</span>{{ end -}}
+  </div>
+{{- end -}}
