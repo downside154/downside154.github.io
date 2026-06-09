@@ -1,0 +1,168 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.windows-build-tools
+*.exe
+*.o
+*.so
+
+# IDE & Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.sublime-project
+.sublime-workspace
+.project
+.classpath
+.c9/
+*.jb
+.emacs.d/
+.elixir_ls/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+.env.example
+
+# Package Managers
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+Gemfile.lock
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn.lock
+
+# Temporary & Build Files
+.cache
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+.vuepress/dist/
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+
+# OS Temp Files
+*.tmp
+*.bak
+*.swp
+temp/
+tmp/
+
+# Hugo Specific
+resources/_gen/
+*.orig
+
+# AI & Agent Files
+.instructions.md
+.prompt.md
+.agent.md
+AGENTS.md
+copilot-instructions.md
+.claude/
+.omc/
+.omx/
+.ai/
+ai-files/
+agent-logs/
+*.ai.json
+.openai/
+.anthropic/
+.cohere/
+.agent*/
+
+# AI Model Files
+*.model
+*.pkl
+*.joblib
+*.h5
+*.weights
+__pycache__/
+.ipynb_checkpoints/
+
+# LLM Cache & State
+.cache/llm/
+llm_cache/
+.ollama/
+.llamacpp/
+
+# Copilot & IDE AI Extensions
+.copilot/
+.github/copilot/
+
+# Local Development
+.local/
+local-storage/
+.private/
+secrets/
+
+# Testing
+coverage/
+.nyc_output/
+.coverage
+htmlcov/
+
+# macOS Specific
+.AppleDouble
+.LSOverride
+._*
+.apdisk
+
+# Windows Specific
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Linux Specific
+.directory
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Git
+.git/
